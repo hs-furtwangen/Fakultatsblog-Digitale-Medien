@@ -1,0 +1,24 @@
+
+<div class="termin">
+  <div class="termin-datum">
+    <span>
+      <f:if condition="{data.date}">
+      <f:format.date format="d.m.Y">{data.date}</f:format.date>
+      </f:if>
+    </span>
+  </div>
+
+  <div class="termin-dis">
+    <h2 class="termin-headdline">
+      <f:if condition="{data.tx_mask_headline}">
+      {data.tx_mask_headline}
+      </f:if>
+    </h2>
+
+    <div class="termin-beschreibung">
+      <f:if condition="{data.bodytext}">
+      <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
+      </f:if>
+    </div>
+  </div>
+</div>

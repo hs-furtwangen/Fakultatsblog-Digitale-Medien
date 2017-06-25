@@ -1,0 +1,78 @@
+/* ####################### */
+/* LOADING OTHER FILES */
+/* ####################### */
+
+@import variable
+@import extent
+@import typografie
+@import globallayout
+@import header
+@import footer
+
+@import startseite
+@import normalpage
+@import studiengange
+@import campus
+@import projekte
+@import projekt
+@import randomprojekte
+
+body, html
+  font-size: 10px
+  background: $white
+  padding: 0
+  margin: 0
+  min-width: 100%
+  min-height: 100%
+  @media screen and (min-width: $ultrahd)
+    font-size: 10px
+
+/* ####################### */
+// GLOBALE BUTTON KLASSE
+
+.button
+  color: $white
+  font-weight: normal
+  padding: 1em
+  border-radius: 1rem
+  background-color: none
+  border: 0
+  display: inline-block
+  font-size: 1.8rem
+  position: relative
+  overflow: hidden
+  z-index: 1
+
+.button:hover
+  transform: scale(1.05)
+  color: $white
+  @extend .shadow
+
+.button::before
+  background-color: $main
+  content: ""
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: -2
+  @extend .hover
+
+.button::after
+  background-color: $main2
+  content: ""
+  width: 100%
+  height: 0
+  opacity: 0
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: -1
+  @extend .hover
+
+/* ####################### */

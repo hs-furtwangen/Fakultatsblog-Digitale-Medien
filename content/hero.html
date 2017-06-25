@@ -1,0 +1,28 @@
+
+  <f:if condition="{data.image}">
+  <f:for each="{data.image}" as="file">
+  <section class="heroimage" style="background-image: url(fileadmin/{file.identifier})">
+  </f:for>
+  </f:if>
+
+    <div class="hero_intro">
+
+      <h2 class="hero_pageheadline">
+        <f:if condition="{data.tx_mask_headline}">
+          {data.tx_mask_headline}
+        </f:if>
+      </h2>
+
+      <div class="hero_pagedis">
+        <p>
+          <f:if condition="{data.tx_mask_normaltext}">
+            <f:format.nl2br>{data.tx_mask_normaltext}</f:format.nl2br>
+          </f:if>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="hero_overlay"></div>
+
+  </section>

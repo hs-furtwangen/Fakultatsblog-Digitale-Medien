@@ -1,0 +1,65 @@
+/* ####################### */
+/* TYPOGRAFIE */
+/* ####################### */
+
+body
+  font-family: $font1
+  font-size: 10px
+
+h2
+  font-size: 3.5rem
+  line-height: 1.1em
+  padding: 0 0 20px 0
+  margin: 0
+  position: relative
+
+h2::after
+  position: absolute
+  bottom: 0.2rem
+  left: 0
+  height: 0.5rem
+  width: 6rem
+  background-color: $dark1
+  content: ""
+
+h3, h4, h5
+  color: $dark1
+  padding: 0.5em 0 0.8em 0
+  margin: 0
+
+h3
+  font-size: 2.5rem
+
+h4
+  font-size: 2rem
+
+h5
+  font-size: 1.8em
+
+p
+  font-size: 1.6rem
+  font-weight: 300
+  line-height: 1.5em
+  color: $dark1
+  @media screen and (max-width: $mobile)
+    font: 1.6rem
+  @media screen and (min-width: $tablet)
+    font-size: 2.3rem
+
+  a
+    font-weight: bold
+    font-size: 1.6rem
+    color: $main
+    @media screen and (max-width: $mobile)
+      font: 1.6rem
+    @media screen and (min-width: $tablet)
+      font-size: 2.3rem
+
+a
+  font-size: 1.8rem
+  font-weight: normal
+  text-decoration: none
+  @extend .hover
+
+a:hover
+  color: $main

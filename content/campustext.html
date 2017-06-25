@@ -1,0 +1,18 @@
+
+<article class="campus-element campus-plane-text">
+
+  <f:if condition="{data.header}">
+    <h2>{data.header}</h2>
+  </f:if>
+
+  <p class="beschreibung">
+    <f:if condition="{data.tx_mask_campustextfeld}">
+      <f:format.nl2br>{data.tx_mask_campustextfeld}</f:format.nl2br>
+    </f:if>
+  </p>
+
+  <f:if condition="{data.tx_mask_campustextfeldlink}">
+    <a target="_blank" class="button" href="{data.tx_mask_campustextfeldlink}">Mehr Informationen</a>
+  </f:if>
+
+</article>

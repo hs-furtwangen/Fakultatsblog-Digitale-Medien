@@ -1,0 +1,18 @@
+
+<f:if condition="{data.tx_mask_campuslinkbild}">
+  <article class="campus-element campus-bild">
+    <a href="{data.tx_mask_campuslinkbild}">
+      <div class="inhalt">
+        <f:if condition="{data.header}">
+          <h3>{data.header}</h3>
+        </f:if>
+
+        <f:if condition="{data.tx_mask_campusimg}">
+          <f:for each="{data.tx_mask_campusimg}" as="file">
+            <div class="projekt-box-background" style="background-image: url(fileadmin{file.identifier});"></div>
+          </f:for>
+        </f:if>
+      </div>
+    </a>
+  </article>
+</f:if>

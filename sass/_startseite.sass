@@ -1,0 +1,139 @@
+/* ####################### */
+/* STARTSEITE */
+/* ####################### */
+
+.page
+
+  .projekte-frontpage
+    padding: 5rem 0 0 0
+    @extend .center
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    @media screen and (max-width: $tablet)
+      flex-flow: column
+      flex-wrap: wrap
+      flex-direction: column
+
+    .projekte_text
+      width: 29.8%
+      padding: 2%
+      margin: 0 0 0.39% 0
+      background: $gray4
+      @media screen and (max-width: $tablet)
+        width: 96%
+
+    .projekte
+      width: 65.8%
+      margin: 0 0 0 0
+      padding: 0
+      display: flex
+      flex-flow: row
+      flex-wrap: wrap
+      justify-content: space-between
+      @media screen and (max-width: $tablet)
+        width: 100%
+
+      .projekt-box
+        width: 49.8%
+        margin: 0 0 0.4% 0
+        @media screen and (max-width: $mobile)
+          width: 100%
+
+  .aktuelles
+    margin: 10rem auto 0 auto
+    display: flex
+    flex-flow: row
+    flex-wrap: wrap
+    justify-content: space-between
+    @extend .center
+
+    h2
+      width: 100%
+      margin: 0 0 3rem 0
+
+    .aktuelles-box
+      width: 32.8%
+      min-height: 30rem
+      background-color: $gray4
+
+  .termine_ubersicht
+    margin: 10rem auto 5rem auto
+    @extend .center
+
+    .termine
+      margin: 2rem 0 0 0
+      position: relative
+      overflow: hidden
+      @extend .hover
+
+      .termin
+        display: flex
+        position: absolute
+        top: 0
+        left: 100%
+        background: $dark1
+        flex-flow: row
+        justify-content: space-between
+        align-items: stretch
+        width: 100%
+        cursor: pointer
+        @media screen and (max-width: $mobile)
+          flex-flow: wrap
+          flex-flow: column
+
+        .termin-datum
+          width: 25%
+          background: $main
+          font-size: 5rem
+          color: $white
+          font-weight: bold
+          text-align: center
+          display: flex
+          align-items: center
+          flex-flow: row
+          @media screen and (max-width: $tablet)
+            width: 40%
+            font-size: 4rem
+          @media screen and (max-width: $mobile)
+            width: 100%
+            padding: 2rem 0 2rem 0
+
+          span
+            width: 90%
+            margin: 0 auto 0 auto
+            text-align: center
+            display: inline-block
+            cursor: pointer
+
+        .termin-dis
+          width: 71%
+          margin: 0 2% 0 2%
+          padding-bottom: 2rem
+          @media screen and (max-width: $mobile)
+            width: 80%
+            padding: 0 0 1rem 0
+            margin: 0 auto 0 auto
+
+          h2.termin-headdline
+            color: $white
+            margin: 2.7rem 0 2.7rem 0
+            padding: 0 0 0 2rem
+
+          h2.termin-headdline::after
+            display: none
+
+          .termin-beschreibung
+            margin: 0 0 0 0
+            color: $white
+            padding: 0 2rem 1.6rem 2rem
+
+            p
+              font-weight: 300
+              color: $white
+
+      .termin.aktiv
+        left: 0
+
+    .termine:hover
+      transform: scale(1.01)

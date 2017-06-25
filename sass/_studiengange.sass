@@ -1,0 +1,34 @@
+
+.studiengange
+  margin: 15rem auto 0 auto
+
+
+  .studiengang
+    margin: 0 auto 10rem auto
+    display: flex
+    flex-wrap: wrap
+    @extend .center
+    justify-content: space-between
+    @media screen and (max-width: $mobile)
+      margin: 0 auto 3rem auto
+
+    .studiengang-beschreibung
+      width: 42%
+      background-color: $gray4
+      padding: 2%
+      @media screen and (max-width: $mobile)
+        width: 100%
+
+    .studiengang-bild
+      width: 53%
+      min-height: 30rem
+      background-size: cover
+      background-position: center center
+      @media screen and (max-width: $mobile)
+        width: 100%
+        margin: 0 0 2rem 0
+
+  .studiengang:nth-child(2n+1)
+    flex-direction: row-reverse
+    @media screen and (max-width: $mobile)
+      flex-direction: row

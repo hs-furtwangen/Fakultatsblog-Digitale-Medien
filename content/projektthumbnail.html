@@ -1,0 +1,128 @@
+
+<div class="thumbnail-projekt">
+  <div class="inhalt <f:for each="{data.tx_mask_professoren_namen}" as="data_item"><f:if condition="{data_item.tx_mask_professor_keyword}">{data_item.tx_mask_professor_keyword} </f:if></f:for>{f:if(condition: '{data.tx_mask_artprojekt} == 1', then: 'projektstudium')}<f:if condition="{data.tx_mask_typdesprojektes}"><f:switch expression="{data.tx_mask_typdesprojektes}"><f:case value="1">projektstudium</f:case><f:case value="2">freiearbeit</f:case><f:case value="3">kooperation</f:case><f:case value="4">bachelorthesis</f:case><f:case value="5">masterthesis</f:case><f:case value="6">kursleistung</f:case></f:switch></f:if><f:if condition="{data.tx_mask_bereichdesprojektes}"><f:switch expression="{data.tx_mask_bereichdesprojektes}"><f:case value="1"> webdesign</f:case><f:case value="2">  videoproduktion</f:case><f:case value="3">  audioproduktion</f:case><f:case value="4"> fotografie</f:case><f:case value="5"> musik</f:case><f:case value="6"> animation</f:case><f:case value="7"> gamedesign</f:case><f:case value="8"> printdesign</f:case><f:case value="9"> marketing</f:case><f:case value="10"> interfacedesign</f:case><f:case value="11"> informatik</f:case><f:case value="12"> virtualreality</f:case></f:switch></f:if><f:if condition="{data.tx_mask_semeseter}"><f:switch expression="{data.tx_mask_semeseter}"><f:case value="1"> 1sb</f:case><f:case value="2"> 2sb</f:case><f:case value="3"> 3sb</f:case><f:case value="4"> 4sb</f:case><f:case value="5"> 5sb</f:case><f:case value="6"> 6sb</f:case><f:case value="7"> 7sb</f:case><f:case value="8"> 1sm</f:case><f:case value="9"> 2sm</f:case><f:case value="10"> 3sm</f:case></f:switch></f:if><f:if condition="{data.tx_mask_studiengang}"><f:for each="{data.tx_mask_studiengang}" as="data_item"><f:switch expression="{data_item.tx_mask_studiengangauswahl}"><f:case value="1"> mib</f:case><f:case value="2"> omb</f:case><f:case value="3"> mkb</f:case><f:case value="4"> mdb</f:case><f:case value="5"> mim</f:case><f:case value="6"> dimm</f:case><f:case value="7"> mdm</f:case></f:switch></f:for></f:if>">
+    <h3>
+      <f:if condition="{data.header}">{data.header}</f:if><br>
+      <f:if condition="{data.tx_mask_typdesprojektes}">
+        <f:switch expression="{data.tx_mask_typdesprojektes}">
+          <f:case value="1"><span>Projektstudium</span></f:case>
+          <f:case value="2"><span>Freie Arbeit</span></f:case>
+          <f:case value="3"><span>Kooperation</span></f:case>
+          <f:case value="4"><span>Bachelor (Thesis)</span></f:case>
+          <f:case value="5"><span>Master (Thesis)</span></f:case>
+          <f:case value="6"><span>Kursleistung</span></f:case>
+        </f:switch>
+      </f:if>
+    </h3>
+
+    <f:if condition="{data.image}">
+      <f:for each="{data.image}" as="file">
+        <div class="projekt-box-background" style="background-image: url(fileadmin{file.identifier});"></div>
+      </f:for>
+    </f:if>
+
+  </div>
+</div>
+
+<div class="infobox-projekt">
+
+  <ul class="info-data">
+
+    <h3>Daten:</h3>
+
+    <li><b>Name des Projektes:</b> <f:if condition="{data.header}">{data.header}</f:if></li>
+
+    <!-- Bereich des Projektes -->
+    <li><b>Bereich:</b> <f:if condition="{data.tx_mask_bereichdesprojektes}">
+      <f:switch expression="{data.tx_mask_bereichdesprojektes}">
+        <f:case value="1">Web Design</f:case>
+        <f:case value="2">Video Produktion</f:case>
+        <f:case value="3">Audio Produktion</f:case>
+        <f:case value="4">Fotografie</f:case>
+        <f:case value="5">Musik</f:case>
+        <f:case value="6">Animation</f:case>
+        <f:case value="7">Game Design</f:case>
+        <f:case value="8">Print Design</f:case>
+        <f:case value="9">Marketing</f:case>
+        <f:case value="10">Interface Design</f:case>
+        <f:case value="11">Informatik</f:case>
+        <f:case value="12">Virtual Reality</f:case>
+      </f:switch>
+    </f:if></li>
+
+    <!-- Kategorie des Projektes -->
+    <li><b>Kategorie:</b> <f:if condition="{data.tx_mask_typdesprojektes}">
+      <f:switch expression="{data.tx_mask_typdesprojektes}">
+        <f:case value="1">Projektstudium</f:case>
+        <f:case value="2">Freie Arbeit</f:case>
+        <f:case value="3">kooperation</f:case>
+        <f:case value="4">Bachelor Thesis</f:case>
+        <f:case value="5">Master Thesis</f:case>
+        <f:case value="6">Kursleistung</f:case>
+      </f:switch>
+    </f:if><li>
+
+    <!-- Semester des Projektes -->
+    <li><b>Semester:</b> <f:if condition="{data.tx_mask_semeseter}">
+      <f:switch expression="{data.tx_mask_semeseter}">
+        <f:case value="1">1. Semester (Bachelor)</f:case>
+        <f:case value="2">2. Semester (Bachelor)</f:case>
+        <f:case value="3">3. Semester (Bachelor)</f:case>
+        <f:case value="4">4. Semester (Bachelor)</f:case>
+        <f:case value="5">5. Semester (Bachelor)</f:case>
+        <f:case value="6">6. Semester (Bachelor)</f:case>
+        <f:case value="7">7. Semester (Bachelor)</f:case>
+        <f:case value="8">1. Semester (Master)</f:case>
+        <f:case value="9">2. Semester (Master)</f:case>
+        <f:case value="10">3. Semester (Master)</f:case>
+      </f:switch>
+    </f:if></li>
+
+    <!-- Studiengang -->
+    <f:if condition="{data.tx_mask_studiengang}">
+      <li><b>Studiengänge:</b> <ul>
+        <f:for each="{data.tx_mask_studiengang}" as="data_item">
+          <li>
+            <f:switch expression="{data_item.tx_mask_studiengangauswahl}">
+            <f:case value="1">Medieninformatik B.Sc.</f:case>
+            <f:case value="2">OnlineMedien B.Sc.</f:case>
+            <f:case value="3">Medienkonzeption B.A.</f:case>
+            <f:case value="4">Musikdesign B.Mus.</f:case>
+            <f:case value="5">Medieninformatik M.Sc.</f:case>
+            <f:case value="6">Design Interaktiver Medien M.A.</f:case>
+            <f:case value="7">MusicDesign M.A.</f:case>
+            </f:switch>
+          </li>
+        </f:for>
+      </ul></li>
+    </f:if>
+
+    <!-- Professoren -->
+    <f:if condition="{data.tx_mask_professoren_namen}">
+      <li><b>Professoren/Betreuer:</b> <ul>
+        <f:for each="{data.tx_mask_professoren_namen}" as="data_item">
+        <li>{data_item.tx_mask_professor}</li>
+        </f:for>
+      </ul></li>
+    </f:if>
+
+    <!-- Beteiligte -->
+    <f:if condition="{data.tx_mask_beteiligte}">
+      <li><b>Beteiligte:</b> <ul>
+        <f:for each="{data.tx_mask_beteiligte}" as="data_item">
+          <li>{data_item.tx_mask_beteiligte}</li>
+        </f:for>
+      </ul></li>
+    </f:if>
+
+  </ul>
+
+  <div class="beschreibung">
+    <h3>Beschreibung:</h3>
+    <!-- Beschreibung -->
+    <f:if condition="{data.bodytext}">
+      <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html>
+    </f:if>
+  </div>
+
+</div>

@@ -1,0 +1,28 @@
+<f:render partial="header" arguments="{_all}" />
+
+<f:render partial="hero" arguments="{_all}" />
+
+  <main id="content" class="page">
+
+    <section id="projekte" class="projekte-frontpage">
+      <article class="projekte_text"><f:format.raw>{content1}</f:format.raw></article>
+      <div class="projekte"><f:cObject typoscriptObjectPath="lib.getsubpagesfrontpage" /></div>
+    </section>
+
+    <section id="aktuelles" class="aktuelles">
+      <h2>Aktuelles</h2>
+      <article class="aktuelles-box"></article>
+      <article class="aktuelles-box"></article>
+      <article class="aktuelles-box"></article>
+    </section>
+
+    <section id="termine" class="termine_ubersicht">
+      <h2>Termine</h2>
+      <div class="termine">
+          <f:format.raw>{content2}</f:format.raw>
+      </div>
+    </section>
+
+  </main>
+
+<f:render partial="footer" arguments="{_all}" />

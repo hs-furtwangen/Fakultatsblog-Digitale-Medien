@@ -1,0 +1,38 @@
+.projekte-random
+  width: 100%
+  margin: 5rem 0 0 0
+  padding: 0
+  display: flex
+  flex-flow: row
+  flex-wrap: wrap
+  justify-content: space-between
+
+  h3
+    width: 100%
+    font-size: 3.5rem
+    line-height: 1.1em
+    padding: 0 0 2rem 0
+    margin: 0 0 2rem 0
+    position: relative
+
+  h3::after
+    position: absolute
+    bottom: 0.2rem
+    left: 0
+    height: 0.5rem
+    width: 6rem
+    background-color: $dark1
+    content: ""
+
+  .projekt-box
+    width: 32.8%
+    margin: 0 0 0.4% 0
+    max-height: 15rem
+    @media screen and (max-width: $mobile)
+      width: 100%
+
+    .thumbnail-projekt
+      display: block
+
+    .infobox-projekt
+      display: none

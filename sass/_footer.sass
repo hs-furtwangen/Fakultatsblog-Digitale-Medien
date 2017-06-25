@@ -1,0 +1,138 @@
+/* ####################### */
+/* FOOTER */
+/* ####################### */
+
+footer
+  width: 100%
+  background: $dark1
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  .inhalt
+    @extend .center
+    display: flex
+    justify-content: space-between
+    flex-wrap: nowrap
+    align-items: center
+    @media screen and (max-width: $mobile)
+      flex-flow: column
+      flex-wrap: wrap
+
+    // Social Icons
+    .social
+      margin: 5rem 0 5rem 0
+      @media screen and (max-width: $mobile)
+        margin: 3rem 0 3rem 0
+
+      .social_icon
+        margin: 0 0.6rem 0 0
+        display: inline-block
+        width: 5rem
+        height: 5rem
+        border-radius: 0.5rem
+        overflow: hidden
+        position: relative
+        background: $main
+        @extend .hover
+
+        img
+          width: 100%
+
+      .social_icon:hover
+        transform: scale(1.05)
+        color: $white
+
+      .social_icon::before
+        background-color: $main
+        content: ""
+        width: 100%
+        height: 100%
+        border-radius: 0.5rem
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        z-index: -2
+        @extend .hover
+
+      .social_icon::after
+        border-radius: 0.5rem
+        background-color: $main2
+        content: ""
+        width: 100%
+        opacity: 0
+        height: 0
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        z-index: -1
+        @extend .hover
+
+      .social_icon:hover::after
+        height: 100%
+        opacity: 1
+
+    // LOGO DER HOCHSCHULE
+    .footer_logo
+      width: 8rem
+      @media screen and (max-width: $mobile)
+        margin: 0 0 3rem 0
+
+      img
+        opacity: 0.5
+        width: 100%
+        @extend .hover
+
+      img:hover
+        opacity: 1
+
+  // META MENÜ
+  .meta
+    background: $black
+    width: 100%
+    display: flex
+    @media screen and (max-width: $mobile)
+      margin: 3rem 0 0 0
+
+    .inhalt
+      @extend .center
+      display: flex
+      justify-content: space-between
+      flex-wrap: nowrap
+
+      p
+        font-size: 1.4rem
+        color: $white
+        padding: 3rem 0 3rem 0
+        margin: 0
+
+      nav
+        @media screen and (max-width: $mobile)
+          display: flex
+          flex-flow: row
+          justify-content: center
+
+        ul
+          margin: 0
+          padding: 0
+
+          li
+            display: inline-block
+            list-style: none
+            padding: 3rem 0 3rem 2rem
+
+            a
+              color: $white
+              font-size: 1.4rem
+              @extend .hover
+
+            a:hover
+              color: $main
+
+          li.menu-currend
+            a
+              color: $main

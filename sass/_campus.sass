@@ -1,0 +1,149 @@
+
+.ankundigungen
+  padding-top: 15rem
+  display: flex
+  flex-flow: wrap
+  justify-content: space-between
+  @extend .center
+  @media screen and (max-width: $mobile)
+    padding-top: 9rem
+
+  .campus-element:first-of-type
+    width: 100%
+
+    h2
+      font-size: 6rem
+      max-width: 60%
+      @media screen and (max-width: $mobile)
+        font-size: 4rem
+        max-width: 90%
+
+  .campus-element
+    min-height: 45rem
+    display: block
+    width: 32%
+    margin: 0 0 2% 0
+    background-size: cover
+    @extend .hover
+    background-position: center center
+    position: relative
+    @media screen and (max-width: $tablet)
+      width: 49%
+    @media screen and (max-width: $mobile)
+      width: 100%
+      min-height: 40rem
+
+  .campus-bild
+    position: relative
+    display: block
+    background-color: $dark1
+    overflow: hidden
+    perspective: 200px
+
+    .inhalt
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+
+      h3
+        color: $white
+        position: absolute
+        top: 2rem
+        left: 9%
+        right: 9%
+        z-index: 1
+        @extend .hover
+        opacity: 0
+        transform: translate(0,-2rem)
+        font-size: 2.5rem
+
+        span
+          font-size: 1.7rem
+          font-weight: 400
+          color: $gray3
+
+      .projekt-box-background
+        position: absolute
+        top: 0
+        z-index: 2
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        height: 100%
+        transform-origin: left
+        background-size: cover
+        transform-style: preserve-3d
+        background-position: center center
+        @extend .hover
+
+  .campus-bild:hover
+
+    h3
+      opacity: 1
+      transform: translate(0,0)
+
+    .projekt-box-background
+      @extend .shadow
+      opacity: 0.4
+      transform: translate3d(0,50%,-4rem)
+
+  .campus-plane-text
+    position: relative
+    background: $gray4
+
+    h2
+      margin: 2rem 3rem 2rem 3rem
+
+    p
+      margin: 0 3rem 2rem 3rem
+
+    a
+      position: absolute
+      bottom: 3rem
+      width: auto
+      display: block
+      float: left
+      margin: 0 3rem 0 3rem
+
+  .campus-bild-text
+    display: block
+    position: relative
+    color: $white
+    background-size: cover
+    @extend .hover
+    background-position: center center
+
+    .overlay
+      position: absolute
+      background: rgba(0,0,0,1)
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      opacity: 0.3
+      height: 100%
+      @extend .hover
+
+    h2
+      position: absolute
+      z-index: 5
+      margin: 2rem 3rem 2rem 3rem
+
+    h2::after
+      background: $white
+
+    a
+      position: absolute
+      bottom: 3rem
+      width: auto
+      display: block
+      margin: 0 3rem 0 3rem
+
+  .campus-bild-text:hover > .overlay
+    opacity: 0.6

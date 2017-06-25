@@ -1,0 +1,67 @@
+
+// GLOBALE STYLES - THEME
+// Hier stehen alle Informaitonen zu Globalen Layout Elemente, also Elementen die sich überall befinden.
+
+
+.heroimage
+  width: 100%
+  min-height: 50vh
+  background: $gray1
+  display: flex
+  background-position: center center
+  background-size: cover
+  position: relative
+  background-attachment: fixed
+  @media screen and (max-width: $mobile)
+    min-height: 30vh
+
+  .hero_overlay
+    background: $dark1
+    opacity: 0.65
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+
+  .hero_intro
+    z-index: 3
+    margin: 20rem auto 10rem auto
+    max-width: 140rem
+    @extend .center
+    @media screen and (max-width: $mobile)
+      margin: 15rem 5% 6rem 5%
+
+    .hero_pageheadline
+      font-size: 7rem
+      max-width: 95rem
+      margin: 0 auto 0 auto
+      color: $white
+      text-align: center
+      @media screen and (max-width: $mobile)
+        font-size: 5rem
+
+    .hero_pageheadline::after
+      left: 50%
+      transform: translate(-50%,0)
+      background-color: $white
+
+    .hero_pagedis
+      text-align: center
+      margin: 2rem auto 0 auto
+      max-width: 80rem
+      color: $white
+      @media screen and (max-width: $mobile)
+        display: none
+
+      p
+        text-align: center
+        color: $white
+
+
+.page
+  width: 100%
+  margin: 0 0 5rem 0
+  background: $white

@@ -1,0 +1,214 @@
+/* ####################### */
+/* HEADER */
+/* ####################### */
+
+header
+  width: 100%
+  position: fixed
+  z-index: 1000
+  background-color: rgba(0,0,0,0.75)
+  @extend .hover
+  @media screen and (max-width: $mobile)
+    background-color: rgba(0,0,0,0.9)
+
+  .inhalt
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-flow: row
+    flex-wrap: nowrap
+    @extend .center
+    @media screen and (max-width: $mobile)
+      justify-content: flex-start
+      margin: 1rem auto 1rem auto
+      height: 4rem
+
+    .blog-logo
+      display: block
+      width: 10rem
+      float: left
+      margin: 0 3rem 0 0
+      @media screen and (max-width: $mobile)
+        width: 6rem
+        display: none
+
+      img
+        width: 10rem
+        @extend .hover
+        @media screen and (max-width: $mobile)
+          width: 6rem
+
+      img:hover
+        opacity: 0.5
+
+    .hfu-logo
+      width: 7rem
+      @media screen and (max-width: $mobile)
+        margin: 0 0 0 2rem
+
+      img
+        @extend .hover
+        height: 100%
+        @media screen and (max-width: $mobile)
+          width: 4rem
+
+      img:hover
+        opacity: 0.5
+
+    nav
+      padding: 2rem 0 2rem 0
+      display: flex
+      align-items: center
+      flex-flow: row
+      @media screen and (max-width: $mobile)
+        display: none
+
+      ul
+        margin: 0
+        padding: 0
+        display: flex
+
+        li
+          list-style: none
+          margin: 0 3rem 0 0
+          padding: 0
+          display: inline-block
+
+          a
+            color: $white
+            font-size: 2.2rem
+
+          a:hover
+            color: $main
+
+        li.menu-currend
+          a
+            color: $main
+
+        li:last-child
+          margin: 0 0 0 0
+
+  .menu-icon
+    width: 3rem
+    height: 3rem
+    position: absolute
+    right: 5%
+    top: 1.45rem
+    z-index: 200
+    cursor: pointer
+    display: none
+    @media screen and (max-width: $mobile)
+      display: block
+
+    span
+      position: absolute
+      display: block
+      top: 50%
+      left: 50%
+      width: 100%
+      transform: translate(-50%,0)
+      background: $white
+      height: 0.3rem
+      border-radius: 0.5rem
+      @extend .hover
+
+    span::before
+      content: ""
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      width: 100%
+      transform: translate(0,-0.8rem)
+      background: $white
+      height: 0.3rem
+      border-radius: 0.5rem
+      @extend .hover
+
+    span::after
+      content: ""
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      width: 100%
+      transform: translate(0,0.8rem)
+      background: $white
+      height: 0.3rem
+      border-radius: 0.5rem
+      @extend .hover
+
+  #menu.aktiv
+
+    span
+      position: absolute
+      display: block
+      top: 50%
+      left: 50%
+      width: 100%
+      transform: translate(-50%,0)
+      background: none
+      height: 0.7rem
+      border-radius: 0.5rem
+
+    span::before
+      transform: translate(0,0) rotate(45deg)
+
+    span::after
+      transform: translate(0,0) rotate(-45deg)
+
+header.aktiv
+  background: $main
+
+.menu-mobile
+  width: 0
+  position: fixed
+  top: 9
+  right: 0
+  height: 0
+  z-index: 20
+  overflow: hidden
+  opacity: 0
+  background: $main
+  border-radius: 2000rem 0 2000rem 2000rem
+  @extend .hover
+
+  ul
+    margin: 0
+    padding: 0
+
+    li
+      list-style: none
+      width: 100%
+      margin: 3rem 0 3rem 0 0
+      text-align: center
+
+      a
+        color: $white
+        font-size: 3rem
+        font-weight: bold
+        text-align: center
+
+.menu-mobile.aktiv
+  height: 100%
+  background: $main
+  opacity: 1
+  top: 6rem
+  width: 100%
+  border-radius: 0
+
+  ul
+    margin: 0
+    padding: 0
+
+    li
+      list-style: none
+      width: 100%
+      margin: 3rem 0 3rem 0 0
+      text-align: center
+
+      a
+        color: $white
+        font-size: 3rem
+        font-weight: bold
+        text-align: center
