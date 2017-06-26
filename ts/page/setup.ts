@@ -1,9 +1,10 @@
 
 // ALLGEMEINE CONFIG EINSTELLUNGEN FÜR TYPO3
 config {
+    no_cache = 0
     doctype = html5
     tx_realurl_enable = 1
-    absRefPrefix = http://projekt-digitalemedienblog/
+    absRefPrefix = http://staging.digitalemedien-furtwangen.de/
     linkVars = L(0-3)
     contentObjectExceptionHandler = 0
     noPageTitle = 2
@@ -155,6 +156,7 @@ lib.getsubpages {
     // Die ID wurde mi der Funktion lip.subpages ermittelt und wird hier übergeben.
     pidInList.cObject < lib.subpages
     where = colPos = 0
+    orderBy = sorting
   }
   renderObj.stdWrap {
     // Das Inhaltselement wird erstellt und alles in ihm wird mit einem Link gewrapt.
@@ -172,7 +174,6 @@ lib.getsubpagesfrontpage {
     pidInList.cObject < lib.subpages
     // Maximal 5 Projekte werden gelalden
     max = 4
-    orderBy = uid
     where = colPos = 0
   }
   renderObj.stdWrap {
@@ -189,7 +190,6 @@ lib.getrandomprojektes {
   select {
     // Die ID wurde mi der Funktion lip.subpages ermittelt und wird hier übergeben.
     pidInList.cObject < lib.subpages
-    orderBy = uid ASC
     // Maximal 5 Projekte werden gelalden
     max = 3
     where = colPos = 0

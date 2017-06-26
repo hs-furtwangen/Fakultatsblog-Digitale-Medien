@@ -14,6 +14,10 @@ $(document).ready(function(){
     height: $('.termine').children('.termin').first().height() + 'px' // Ändert die Höhe der Box
   });
 
+  $('.termin').css({
+    height: $('.termine').children('.termin').first().height() + 'px' // Ändert die Höhe der Box
+  });
+
   // Triggert die Funktion die, den nächsten Termin zeigt
   $('.termine').stop().on('click',function(){
 
@@ -24,9 +28,9 @@ $(document).ready(function(){
 
     // #2 Danach wird geguckt ob das nächste Element ein Termin ist.
     if($(this).children('.aktiv').next().hasClass('termin')) {
-      $('.termine').css({
-        height: $(this).children('.aktiv').next('.termin').height() + 'px' // Ändert die Höhe der Box
-      });
+      // $('.termine').css({
+      //  height: $(this).children('.aktiv').next('.termin').height() + 'px' // Ändert die Höhe der Box
+      // });
       $(this).children('.aktiv').next('.termin').stop().animate({left:'0'},250,function(){
         $('.termine').children().removeClass('aktiv'); // "Aktiv"-Element wird die aktiv classen entzogen
         $(this).addClass('aktiv'); // Element wird das "Aktiv"-Element
