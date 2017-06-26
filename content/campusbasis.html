@@ -1,0 +1,33 @@
+
+<article class="studiengang <f:if condition="{data.tx_mask_kategorie}"><f:for each="{data.tx_mask_kategorie}" as="data_item"><f:if condition="{data_item.tx_mask_kategorie_name}">
+<f:switch expression="{data_item.tx_mask_kategorie_name}">
+<f:case value="1">lebensgefuehl</f:case>
+<f:case value="2">sport</f:case>
+<f:case value="3">nightlifepartys</f:case>
+<f:case value="4">ausflugsziele</f:case>
+<f:case value="5">events</f:case>
+<f:case value="6">essentrinken</f:case>
+<f:case value="7">kultur</f:case>
+</f:switch></f:if></f:for></f:if>">
+
+  <f:if condition="{data.image}">
+      <f:for each="{data.image}" as="file">
+        <div class="studiengang-bild" style="background-image: url(fileadmin/{file.identifier})"></div>
+      </f:for>
+  </f:if>
+
+  <div class="studiengang-beschreibung">
+    <h2>
+      <f:if condition="{data.tx_mask_campusheadline}">
+        {data.tx_mask_campusheadline}
+      </f:if>
+    </h2>
+    <f:if condition="{data.tx_mask_beschreibung}">
+    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_beschreibung}</f:format.html><br />
+    </f:if>
+    <f:if condition="{data.tx_mask_campuslink}">
+    <a class="button" target="_blank"  href="{data.tx_mask_campuslink}">Mehr Informationen</a>
+    </f:if>
+  </div>
+
+</article>

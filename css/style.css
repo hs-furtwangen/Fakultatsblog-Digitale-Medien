@@ -24,7 +24,7 @@
   -webkit-transition: all 275ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 275ms cubic-bezier(0.4, 0, 0.2, 1); }
 
-.center, .heroimage .hero_intro, header .inhalt, footer .inhalt, footer .meta .inhalt, .page .projekte-frontpage, .page .aktuelles, .page .termine_ubersicht, .normal-page, .studiengange .studiengang, .ankundigungen, .projekte-category, .projekt-single {
+.center, .heroimage .hero_intro, header .inhalt, footer .inhalt, footer .meta .inhalt, .page .projekte-frontpage, .page .aktuelles, .page .termine_ubersicht, .normal-page, .studiengang, .ankundigungen, .projekte-category, .projekt-single {
   max-width: 140rem;
   width: 90%;
   margin: 0 auto 0 auto; }
@@ -449,7 +449,7 @@ footer {
         height: 100%;
         opacity: 1; }
     footer .inhalt .footer_logo {
-      width: 8rem; }
+      width: 14rem; }
       @media screen and (max-width: 800px) {
         footer .inhalt .footer_logo {
           margin: 0 0 3rem 0; } }
@@ -674,46 +674,48 @@ footer {
 
 .studiengange {
   margin: 15rem auto 0 auto; }
-  .studiengange .studiengang {
-    margin: 0 auto 10rem auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+
+.studiengang {
+  margin: 0 auto 10rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media screen and (max-width: 800px) {
+    .studiengang {
+      margin: 0 auto 3rem auto; } }
+  .studiengang .studiengang-beschreibung {
+    width: 42%;
+    background-color: #f3f2f2;
+    padding: 2%; }
     @media screen and (max-width: 800px) {
-      .studiengange .studiengang {
-        margin: 0 auto 3rem auto; } }
-    .studiengange .studiengang .studiengang-beschreibung {
-      width: 42%;
-      background-color: #f3f2f2;
-      padding: 2%; }
-      @media screen and (max-width: 800px) {
-        .studiengange .studiengang .studiengang-beschreibung {
-          width: 100%; } }
-    .studiengange .studiengang .studiengang-bild {
-      width: 53%;
-      min-height: 30rem;
-      background-size: cover;
-      background-position: center center; }
-      @media screen and (max-width: 800px) {
-        .studiengange .studiengang .studiengang-bild {
-          width: 100%;
-          margin: 0 0 2rem 0; } }
-  .studiengange .studiengang:nth-child(2n+1) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse; }
+      .studiengang .studiengang-beschreibung {
+        width: 100%; } }
+  .studiengang .studiengang-bild {
+    width: 53%;
+    min-height: 30rem;
+    background-size: cover;
+    background-position: center center; }
     @media screen and (max-width: 800px) {
-      .studiengange .studiengang:nth-child(2n+1) {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row; } }
+      .studiengang .studiengang-bild {
+        width: 100%;
+        margin: 0 0 2rem 0; } }
+
+.studiengang:nth-child(2n+1) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
+  @media screen and (max-width: 800px) {
+    .studiengang:nth-child(2n+1) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
 
 .ankundigungen {
   padding-top: 15rem;
@@ -728,6 +730,13 @@ footer {
   @media screen and (max-width: 800px) {
     .ankundigungen {
       padding-top: 9rem; } }
+  .ankundigungen .studiengang {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 5rem; }
+  .ankundigungen h2 {
+    width: 100%;
+    margin-bottom: 5rem; }
   .ankundigungen .campus-element:first-of-type {
     width: 100%; }
     .ankundigungen .campus-element:first-of-type h2 {

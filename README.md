@@ -41,3 +41,10 @@ Fakultätsblog der Fakultät Digitale Medien der Hochschule Furtwangen.
   <li>Kleine Anpassungen am Layout, neue Farben, Größen und Mobile Richtlinien.</li>
   <li>Zusätzliche Funktionalität im vergleich zu der "Test-Version" wurde hinzugefügt.</li>
 </ul>
+
+<h5>Version - V.0.1.0 - Campus Rework</h5>
+<ul>
+  <li>Logo im Footer wurde verändert, dazu wurde ein neues SVG verlinkt.</li>
+  <li>Campus Layout wurde überarbeitet und durch ein neues Mask Element Erweitert.</li>
+  <li>Kleine Anpassungen an Abständen.</li>
+</ul>

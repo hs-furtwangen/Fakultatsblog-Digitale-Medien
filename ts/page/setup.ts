@@ -1,7 +1,6 @@
 
 // ALLGEMEINE CONFIG EINSTELLUNGEN FÜR TYPO3
 config {
-    cach_period = 5
     doctype = html5
     tx_realurl_enable = 1
     absRefPrefix = http://projekt-digitalemedienblog/
