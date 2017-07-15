@@ -56,3 +56,9 @@ Fakultätsblog der Fakultät Digitale Medien der Hochschule Furtwangen.
   <li>BUGFIX: Mobiles Menü.</li>
   <li>Backend layouts Erweiterrung.</li>
 </ul>
+
+<h5>Version - V.1.0.0 - META Update & SEO Stuff</h5>
+<ul>
+  <li>H1 wurde eingefügt.</li>
+  <li>Seitentitel wurde verbessert.</li>
+</ul>

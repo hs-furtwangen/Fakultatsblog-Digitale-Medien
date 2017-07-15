@@ -18,7 +18,7 @@ page {
   headerData = COA
   headerData.10 = TEXT
   headerData.10.field = title
-  headerData.10.wrap = <title>|</title>
+  headerData.10.wrap = <title>|&#32;- Fakultätsblog Digitale Medien</title>
 
   // META INFORMATIONEN DIE AUF JEDERZEITE AUS DEM BACKEND GENERIERT WERDEN
   meta {
