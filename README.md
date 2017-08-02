@@ -57,8 +57,14 @@ Fakultätsblog der Fakultät Digitale Medien der Hochschule Furtwangen.
   <li>Backend layouts Erweiterrung.</li>
 </ul>
 
-<h5>Version - V.1.0.0 - META Update & SEO Stuff</h5>
+<h5>Version - V.1.0.1 - META Update & SEO Stuff</h5>
 <ul>
   <li>H1 wurde eingefügt.</li>
   <li>Seitentitel wurde verbessert.</li>
+</ul>
+
+<h5>Version - V.1.0.2 - Inhaltliche Verbesserungen</h5>
+<ul>
+  <li>CTA bei dern Studiengängen wurde zu "Alle Infos" geändert.</li>
+  <li>Abstand bei den Studiengängen wurde reduziert, sieht jetzt so aus wie bei Campus.</li>
 </ul>
