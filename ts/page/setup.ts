@@ -3,8 +3,9 @@
 config {
     no_cache = 0
     doctype = html5
+    baseURL = http://digitalemedien-furtwangen.de
+    absRelPath = /
     tx_realurl_enable = 1
-    absRefPrefix = http://staging.digitalemedien-furtwangen.de/
     linkVars = L(0-3)
     contentObjectExceptionHandler = 0
     noPageTitle = 2
@@ -12,6 +13,7 @@ config {
 
 page = PAGE
 page.typeNum = 0
+page.shortcutIcon = typo3conf/ext/template/img/favicon.ico
 page {
 
   headerData >

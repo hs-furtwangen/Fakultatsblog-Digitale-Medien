@@ -25,11 +25,20 @@
     <f:if condition="{data.tx_mask_beschreibung}">
     <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_beschreibung}</f:format.html><br />
     </f:if>
+
+
     <f:if condition="{data.tx_mask_campuslink}">
-    <a class="button" target="_blank"  href="{data.tx_mask_campuslink}">
-      Informationen
-    </a>
+      <a class="button" target="_blank"  href="{data.tx_mask_campuslink}">
     </f:if>
+    <f:if condition="{data.tx_mask_campuslinktitel}">
+      <f:then>{data.tx_mask_campuslinktitel}</f:then>
+      <f:else>Informationen</f:else>
+    </f:if>
+    </a>
+
+
+
+
   </div>
 
 </article>
