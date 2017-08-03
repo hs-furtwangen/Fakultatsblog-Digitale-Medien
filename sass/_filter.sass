@@ -1,0 +1,71 @@
+.none
+  display: none
+
+.fadein
+  transform: scale(1)
+
+.fadeout
+  transform: scale(0)
+
+.filter
+  width: 100%
+  margin: 0 0 1rem 0
+
+  .select-boxen
+    width: 100%
+    display: flex
+    flex-flow: row
+    flex-wrap: wrap
+    justify-content: space-between
+
+    .filter-select
+      width: 24%
+      padding: 2%
+      font-size: 1.6rem
+      @media screen and (max-width: $mobile)
+        width: 100%
+        margin: 0 0 1rem 0
+
+    .filter-select:focus
+      outline: none
+
+    .campus-filter
+      width: 100%
+
+  .filter-auswahl
+    margin: 1rem 0 0 0
+    width: 100%
+
+    .kriterium
+      padding: 0.6rem 4rem 0.6rem 0.6rem
+      font-size: 1.6rem
+      background: $main
+      color: $white
+      cursor: pointer
+      display: inline-block
+      border-radius: 1rem 3rem 3rem 1rem
+      position: relative
+      float: left
+      margin: 0 1rem 1rem 0
+      @extend .shadow
+      @extend .hover
+
+    .kriterium:hover
+      transform: scale(1.1)
+
+    .kriterium::after, .kriterium::before
+      content: ""
+      position: absolute
+      right: 1.3rem
+      top: 1.5rem
+      z-index: 5
+      position: absolute
+      background: $white
+      width: 1.5rem
+      height: 0.2rem
+
+    .kriterium::after
+      transform: rotate(45deg)
+
+    .kriterium::before
+      transform: rotate(-45deg)

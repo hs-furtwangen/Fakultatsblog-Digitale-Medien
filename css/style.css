@@ -20,7 +20,7 @@
     .typo, .projekt-single .infobox-projekt .info-data {
       font-size: 2.3rem; } }
 
-.hover, a, header, header .inhalt .blog-logo img, header .inhalt .hfu-logo img, header .menu-icon span, header .menu-icon span::before, header .menu-icon span::after, .menu-mobile, footer .inhalt .social .social_icon, footer .inhalt .social .social_icon::before, footer .inhalt .social .social_icon::after, footer .inhalt .footer_logo img, footer .meta .inhalt nav ul li a, .page .termine_ubersicht .termine, .ankundigungen .campus-element, .ankundigungen .campus-bild .inhalt h3, .ankundigungen .campus-bild .inhalt .projekt-box-background, .ankundigungen .campus-bild-text, .ankundigungen .campus-bild-text .overlay, .projekt-box, .projekt-box .inhalt h3, .projekt-box .inhalt .projekt-box-background, .button::before, .button::after {
+.hover, a, header, header .inhalt .blog-logo img, header .inhalt .hfu-logo img, header .menu-icon span, header .menu-icon span::before, header .menu-icon span::after, .menu-mobile, footer .inhalt .social .social_icon, footer .inhalt .social .social_icon::before, footer .inhalt .social .social_icon::after, footer .inhalt .footer_logo img, footer .meta .inhalt nav ul li a, .page .termine_ubersicht .termine, .ankundigungen .campus-element, .ankundigungen .campus-bild .inhalt h3, .ankundigungen .campus-bild .inhalt .projekt-box-background, .ankundigungen .campus-bild-text, .ankundigungen .campus-bild-text .overlay, .projekt-box, .projekt-box .inhalt h3, .projekt-box .inhalt .projekt-box-background, .filter .filter-auswahl .kriterium, .button::before, .button::after {
   -webkit-transition: all 275ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 275ms cubic-bezier(0.4, 0, 0.2, 1); }
 
@@ -29,7 +29,7 @@
   width: 90%;
   margin: 0 auto 0 auto; }
 
-.shadow, .ankundigungen .campus-bild:hover .projekt-box-background, .projekt-box:hover .projekt-box-background, .button:hover {
+.shadow, .ankundigungen .campus-bild:hover .projekt-box-background, .projekt-box:hover .projekt-box-background, .filter .filter-auswahl .kriterium, .button:hover {
   box-shadow: 0 0.2rem 1.5rem 0 rgba(0, 0, 0, 0.2), 0 0.6rem 2rem 0 rgba(0, 0, 0, 0.1); }
 
 /* ####################### */
@@ -1080,6 +1080,78 @@ footer {
     .projekte-random .projekt-box .infobox-projekt {
       display: none; }
 
+.none {
+  display: none; }
+
+.fadein {
+  -webkit-transform: scale(1);
+          transform: scale(1); }
+
+.fadeout {
+  -webkit-transform: scale(0);
+          transform: scale(0); }
+
+.filter {
+  width: 100%;
+  margin: 0 0 1rem 0; }
+  .filter .select-boxen {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row;
+        flex-flow: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .filter .select-boxen .filter-select {
+      width: 24%;
+      padding: 2%;
+      font-size: 1.6rem; }
+      @media screen and (max-width: 800px) {
+        .filter .select-boxen .filter-select {
+          width: 100%;
+          margin: 0 0 1rem 0; } }
+    .filter .select-boxen .filter-select:focus {
+      outline: none; }
+    .filter .select-boxen .campus-filter {
+      width: 100%; }
+  .filter .filter-auswahl {
+    margin: 1rem 0 0 0;
+    width: 100%; }
+    .filter .filter-auswahl .kriterium {
+      padding: 0.6rem 4rem 0.6rem 0.6rem;
+      font-size: 1.6rem;
+      background: #69AE24;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 1rem 3rem 3rem 1rem;
+      position: relative;
+      float: left;
+      margin: 0 1rem 1rem 0; }
+    .filter .filter-auswahl .kriterium:hover {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+    .filter .filter-auswahl .kriterium::after, .filter .filter-auswahl .kriterium::before {
+      content: "";
+      position: absolute;
+      right: 1.3rem;
+      top: 1.5rem;
+      z-index: 5;
+      position: absolute;
+      background: #ffffff;
+      width: 1.5rem;
+      height: 0.2rem; }
+    .filter .filter-auswahl .kriterium::after {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .filter .filter-auswahl .kriterium::before {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+
 body, html {
   font-size: 10px;
   background: #ffffff;
@@ -1102,7 +1174,9 @@ body, html {
   font-size: 1.8rem;
   position: relative;
   overflow: hidden;
-  z-index: 1; }
+  z-index: 1;
+  text-align: center;
+  min-width: 50%; }
 
 .button:hover {
   -webkit-transform: scale(1.05);

@@ -17,20 +17,43 @@ Fakultätsblog der Fakultät Digitale Medien der Hochschule Furtwangen.
 
 <p>Desweiteren ist die Seite durch ein eigenes Template entwickelt worden, dieses bietet alle Möglichkeiten der Erweiterung und ist wie Folgt aufgebaut:</p>
 
-- Template<br>
--- backend (Backend Themes für Mask)<br>
--- content (Frontend Themes für Mask)<br>
--- css (CSS Files)<br>
--- fonts (Schriften)<br>
--- html (HTML Template für Typo3)<br>
--- img (Grafiken die nur im Design vorkommen wie z.B. das Logo)<br>
--- js (JavaScripte)<br>
---- min (Minifizierte JavaScripte)<br>
---- vendor (Scripte von Externen Quellen)<br>
---- work (eigene JavaScripte, Werden durch Gulp zu einer Datei zusammengefasst)<br>
--- partials (Elemente die bei Typo3 auf verschiedenen Seiten vorkommen)<br>
--- sass (SASS Datein, müssen zu einer CSS Datei zusammengefasst werden)<br>
--- ts (Typoscript, wird direkt ins Backend geladen)<br>
+Template<br>
+--> backend (Backend Themes für Mask)<br>
+--> content (Frontend Themes für Mask)<br>
+--> css (CSS Files)<br>
+--> fonts (Schriften)<br>
+--> html (HTML Template für Typo3)<br>
+--> img (Grafiken die nur im Design vorkommen wie z.B. das Logo)<br>
+--> js (JavaScripte)<br>
+---> min (Minifizierte JavaScripte)<br>
+---> vendor (Scripte von Externen Quellen)<br>
+---> work (eigene JavaScripte, Werden durch Gulp zu einer Datei zusammengefasst)<br>
+--> partials (Elemente die bei Typo3 auf verschiedenen Seiten vorkommen)<br>
+--> sass (SASS Datein, müssen zu einer CSS Datei zusammengefasst werden)<br>
+--> ts (Typoscript, wird direkt ins Backend geladen)<br>
+
+<p>Es wurden verschiedene Plug-In's genutzt im Funktionalität zu der Seite hinzuzufügen. Diese müssen bestehen bleiben da es sonnst zu Problemen mit der Inhaltsdarstellung kommen könnte.</p>
+
+<h5>Genutzte Plug-In's:</h5>
+<ul>
+<li>Mask</li>
+<li>Speaking URLs</li>
+</ul>
+
+<h3>Backup Versionen</h3>
+
+<p>Um eine möglichst sichere Entwicklungsumgebung herzustellen sollte nach der Regel vorgegangen werden nach allen "größeren" Änderrungen ein Komplettes Backup der Seite zu erstellen. Gründe für ein Backup:</p>
+
+<ul>
+<li>Vor dem hinzufügen eines neuen Plug-In's</li>
+<li>Wenn viele Inhalte auf der Seite verändert wurde z.B. diverse neue Projekte erstellt wurden.</li>
+<li>Nach großen Änderrungen am Strukturellen Aufbau der Seite</li>
+</ul>
+
+<h5>Backups:</h5>
+<ul>
+<li>23.07.2017 - Datenbank & FTP Datein - Johannes Schiel</li>
+</ul>
 
 <h3>Versionen</h3>
 
@@ -74,4 +97,10 @@ Fakultätsblog der Fakultät Digitale Medien der Hochschule Furtwangen.
   <li>META: Das Plug-In RealURL wurde hinzugefügt.</li>
   <li>META: Favicon wurde in die Meta-Tags aufgenommen.</li>
   <li>CAMPUS: Bei Campus wurde so erweitert das bei "campusbasis.html" jetzt der Name des Buttons frei vergeben werden kann.</li>
+</ul>
+
+<h5>Version - V.1.1.0 - Filter Projekte</h5>
+<ul>
+  <li>FRONTEND: Button wurden Global auf eine min-width gesetzt, damit auch kleine button genug Aufmerksamkeit bekommen.</li>
+  <li>FRONTEND: Erweiterung der Funktionalität der Projekt Seite durch die Möglichkeit den Inhalt zu Filtern.</li>
 </ul>
