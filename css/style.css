@@ -29,7 +29,7 @@
   width: 90%;
   margin: 0 auto 0 auto; }
 
-.shadow, .ankundigungen .campus-bild:hover .projekt-box-background, .projekt-box:hover .projekt-box-background, .filter .filter-auswahl .kriterium, .button:hover {
+.shadow, .ankundigungen .campus-bild:hover .projekt-box-background, .projekt-box:hover .projekt-box-background, .filter .filter-auswahl .kriterium:hover, .button:hover {
   box-shadow: 0 0.2rem 1.5rem 0 rgba(0, 0, 0, 0.2), 0 0.6rem 2rem 0 rgba(0, 0, 0, 0.1); }
 
 /* ####################### */

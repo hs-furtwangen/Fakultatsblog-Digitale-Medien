@@ -1,14 +1,5 @@
 
-<article class="studiengang <f:if condition="{data.tx_mask_kategorie}"><f:for each="{data.tx_mask_kategorie}" as="data_item"><f:if condition="{data_item.tx_mask_kategorie_name}">
-<f:switch expression="{data_item.tx_mask_kategorie_name}">
-<f:case value="1">lebensgefuehl</f:case>
-<f:case value="2">sport</f:case>
-<f:case value="3">nightlifepartys</f:case>
-<f:case value="4">ausflugsziele</f:case>
-<f:case value="5">events</f:case>
-<f:case value="6">essentrinken</f:case>
-<f:case value="7">kultur</f:case>
-</f:switch></f:if></f:for></f:if>">
+<article class="studiengang<f:if condition="{data.tx_mask_kategorie}"><f:for each="{data.tx_mask_kategorie}" as="data_item"><f:if condition="{data_item.tx_mask_kategorie_name}"><f:switch expression="{data_item.tx_mask_kategorie_name}"><f:case value="1"> lebensgefuehl</f:case><f:case value="2"> sport</f:case><f:case value="3"> nightlifepartys</f:case><f:case value="4"> ausflugsziele</f:case><f:case value="5"> events</f:case><f:case value="6"> essentrinken</f:case><f:case value="7"> kultur</f:case></f:switch></f:if></f:for></f:if>">
 
   <f:if condition="{data.image}">
       <f:for each="{data.image}" as="file">

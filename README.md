@@ -104,3 +104,10 @@ Template<br>
   <li>FRONTEND: Button wurden Global auf eine min-width gesetzt, damit auch kleine button genug Aufmerksamkeit bekommen.</li>
   <li>FRONTEND: Erweiterung der Funktionalität der Projekt Seite durch die Möglichkeit den Inhalt zu Filtern.</li>
 </ul>
+
+<h5>Version - V.1.2.0 - Campus Filter</h5>
+<ul>
+  <li>FILTER: Schatten wird von den Elementen genommen, nur bei Hover wird dieser jetzt gezeigt.</li>
+  <li>FRONTEND: Erweiterung der Funktionalität der Campus Seite durch die Möglichkeit den Inhalt zu Filtern.</li>
+  <li>STARTSEITE: Termine werden nur angezeigt wenn es Termine gibt.</li>
+</ul>

@@ -14,7 +14,8 @@ $('.filter-select').on('change',function(){
     createFilter(name,value);
   }
 
-  filtern();
+  filternCampus();
+  filternProjekt();
 
 })
 
@@ -31,11 +32,52 @@ $('body').on('click','.kriterium',function(){
     return value != element;
   });
 
-  filtern();
-
+  filternCampus();
+  filternProjekt();
 })
 
-function filtern() {
+function filternCampus() {
+
+  var campuselement = $(this);
+  console.log('Campus');
+
+  $('.studiengang').removeClass('fadein').addClass('fadeout');
+
+  $('.studiengang').each(function(){
+
+    console.log($(this));
+    var filterstring;
+
+    for(var i = -1; i < FILTER.length; i++) {
+      if(FILTER[i] == null) {
+        filterstring = '.studiengang';
+      } else {
+        filterstring += '.' + FILTER[i];
+      }
+    }
+
+    if(!($(this).is(filterstring))) {
+      $(this).addClass('none');
+    }
+
+    if($(this).is(filterstring)) {
+      console.log('test2');
+      $(this).removeClass('none');
+    }
+
+    if($(this).is(filterstring)) {
+      console.log('test3');
+      $(this).removeClass('fadeout');
+      $(this).addClass('fadein');
+    }
+
+  });
+}
+
+
+function filternProjekt() {
+
+  console.log('Projekte');
 
   $('.projekt-box').removeClass('fadein').addClass('fadeout');
 

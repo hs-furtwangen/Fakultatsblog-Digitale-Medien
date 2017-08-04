@@ -3,7 +3,7 @@
 config {
     no_cache = 0
     doctype = html5
-    baseURL = http://digitalemedien-furtwangen.de
+    baseURL = http://projekt-fakultatsblog
     absRelPath = /
     tx_realurl_enable = 1
     linkVars = L(0-3)
