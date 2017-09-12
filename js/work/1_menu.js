@@ -21,3 +21,18 @@ $('#menu').stop().on('click',function(){
     STATUS = false; // Stellt den Menü Status auf Geschlossen
   }
 });
+
+// LOGO & MENÜ HOVER
+// Hier wird ein kleines Workaroud erstellt das helfen soll das Hovern des Logos auf die Schrift zu übertragen wie auch das Hovern der Schrift auf das Logo.
+
+$('.blog-logo').stop().hover(function(){
+  $('.menu-item').first().children('a').css('color','#69AE24');
+}, function(){
+  $('.menu-item').first().children('a').css('color','#ffffff');
+});
+
+$('.menu-item').first().stop().hover(function(){
+  $('.blog-logo').css('opacity','0.5');
+}, function(){
+  $('.blog-logo').css('opacity','1');
+});

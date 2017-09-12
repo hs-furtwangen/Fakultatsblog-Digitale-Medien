@@ -111,3 +111,10 @@ Template<br>
   <li>FRONTEND: Erweiterung der Funktionalität der Campus Seite durch die Möglichkeit den Inhalt zu Filtern.</li>
   <li>STARTSEITE: Termine werden nur angezeigt wenn es Termine gibt.</li>
 </ul>
+
+<h5>Version - V.1.2.1 - Campus Filter, Logo Hover & Effekte</h5>
+<ul>
+  <li>FILTER: Rechtschreibfehler verbessert.</li>
+  <li>HEADER: Logo verändert die Farbe beim Hover über den Menüpunkt</li>
+  <li>FRONTEND: Fade & Slide Effekte werden beim Scrollen auf der Seite ausgelöst.</li>
+</ul>

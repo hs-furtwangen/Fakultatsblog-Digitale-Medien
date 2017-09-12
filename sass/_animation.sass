@@ -1,0 +1,66 @@
+.fadein
+  animation: (550ms) fadein
+  animation-fill-mode: forwards
+  opacity: 0
+  transform: translate(0, -2rem*2)
+
+.slideright
+  animation: (550ms) slideright
+  animation-fill-mode: forwards
+  opacity: 0
+  transform: translate(--2rem, 0)
+
+.slideleft
+  animation: (550ms) slideleft
+  animation-fill-mode: forwards
+  opacity: 0
+  transform: translate(-2rem, 0)
+
+@keyframes fadein
+  0%
+    opacity: 0
+    transform: translate(0, -2rem)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes slideright
+  0%
+    opacity: 0
+    transform: translate((--2rem), 0)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes slideleft
+  0%
+    opacity: 0
+    transform: translate(-2rem, 0)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+// ################################################################################
+// DURATION
+// ################################################################################
+
+.animation1
+  animation-delay: 100ms
+.animation2
+  animation-delay: 300ms
+.animation3
+  animation-delay: 500ms
+.animation4
+  animation-delay: 700ms
+.animation5
+  animation-delay: 900ms
+.animation6
+  animation-delay: 1100ms
+.animation7
+  animation-delay: 1300ms
+.animation8
+  animation-delay: 1500ms
+.animation9
+  animation-delay: 1700ms
+.animation10
+  animation-delay: 1900ms
