@@ -118,3 +118,8 @@ Template<br>
   <li>HEADER: Logo verändert die Farbe beim Hover über den Menüpunkt</li>
   <li>FRONTEND: Fade & Slide Effekte werden beim Scrollen auf der Seite ausgelöst.</li>
 </ul>
+
+<h5>Version - V.1.2.2 - BUGFIX</h5>
+<ul>
+  <li>FILTER: MusicDesign wurde auf der Projekt Filter Seite zu Music Design umbenannt.</li>
+</ul>
