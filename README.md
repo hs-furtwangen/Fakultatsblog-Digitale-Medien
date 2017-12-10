@@ -1,4 +1,4 @@
-![Status](https://img.shields.io/badge/Status-stable-brightgreen.svg?style=for-the-badge) ![Release](https://img.shields.io/badge/Release-1.0.0-brightgreen.svg?style=for-the-badge) ![Update](https://img.shields.io/badge/Update-11.12.2017-blue.svg?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-stable-brightgreen.svg?style=for-the-badge) ![Release](https://img.shields.io/badge/Online Verion-1.0.0-brightgreen.svg?style=for-the-badge) ![Update](https://img.shields.io/badge/Update-11.12.2017-blue.svg?style=for-the-badge)
 
 
 # Fakultatsblog Digitale Medien
@@ -12,6 +12,15 @@ Hier werden alle Ansprechpartner die für die Verwaltung der Seite Verantwortlic
 ## Technischer Aufbau des Themes
 In diesem Repository findet Ihr alle Informationen die dazu dienen die Website bzw. das Template des Fakultatsblogs zu verwalten. Dazu wird im folgenden Erklärt wie das Template aufgebaut ist und was damit gemacht werden muss. Jedoch wird die Kenntniss des Grundaufbaus von Typo3 vorrausgesetzt und nicht näher beschreiben.
 
+#### Regeln
+Für die Arbeit mit diesem Repository ist es wichtig das einige Regeln eingehalten werden.
+
+1. Es dürfen keine Änderungen an Typo3 Datein vorgenommen werden die Außerhalb dieses Repositorys auf dem Server liegen. Da diese Änderungen nicht übernommen werden sofern Typo3 ein Update durchführt.
+2. Man sollte im Code Änderungen möglichst genau Kommentieren, denkt immer daran Ihr Seit nicht die einzigen die an dieser Website arbeiten werden.
+3. Es sollten nur Minifizierte Datein verwendet werden.
+4. Nach einem Erfolgreichen Update der Seite sollte kontrolliert werden ob die Seite Valide ist. Hierzu sollten Test mithilfe der website und durchgeführt werden.
+5. Wenn größere Inhaltliche Änderungen durchgeführt werden sollte kontrolliert werden ob die Ladezeiten der Seite ok sind. Hierzu eignen sich die Programme und . Sofern hier Fehler oder Probleme auftauchen sollten diese Behoben werden.
+
 #### Zugangsdaten
 Alle Zugangsdaten zu User Accounts, FTP Zugängen, Host Zugang usw. werden bei Übergabe des HiWi Jobs übergeben und werden nicht in diesem Repository gespeichert. Alle Zugsangsdaten werden als .TXT Datei übergeben und sofern diese Erweitert werden z.B. neue Backend Benutzer usw. sollten diese in die .TXT Datei eingetragen werden. Aktuell besitzt @Unleashed-Design die Zugangsdaten sofern also Fragen oder Probleme auftauchen sollten, sollte sich an ihn gewendet werden.
 
@@ -23,6 +32,9 @@ Um das Design der Seite bearbeiten zu können werden einige Funktionen/Tools gen
 * **TypoScript** In Typo3 wird eine eigene Sprache verwendet das sog. TypoScript, dieses dient der Ausgabe von Informationen sowie dem Verwalten bzw. Arbeiten mit diesen. Alle Datein die dazu benötigt werden finden sich in dem 'ts' Verzeichnis in diesem Repository. TypoScript ersetzt im wesentlichen alles was normalerweile von PHP oder Python übernommen wird.
 * **HTML/HTML5** Die Gesamte Struktur der Seite wird mithilfe von HTML bzw. HTML5 aufgebaut. Dazu sollen mögichst wenig Elemente erstellt werden. Was die Ladezeit der Seite möglichst minimal halten soll.
 * **JavaScript/jQuery** Für diverse Effekte sowie verschiedene Berechnungen und Funktionen wird auf der Seite JavaScript bzw. das Framework jQuery verwendet. In Zukunft soll jedoch versucht werden JavaScript nach dem ES6 Standart zu verwenden und auf das Framework jQuery zu verzichten. Auf diese Weise soll die Performance der Seite verbessert werden.
+
+## Template Aufbau
+In diesem Bereich findet sich eine komplette Zusammenfassung des Aufbaus des Tempaltes.
 
 ## Genutzte Plug-In's:
 Um zu verstehen wie die Seite aufgebaut ist, bzw. welche Funktionen die Seite besitzt ist es wichtig das hier hinterlegt wird welche Funktion von Externen Plug-In's übernommen werden. Dazu sollte sofern ein Plug-In Verwendet wird
@@ -48,51 +60,6 @@ Wenn ein Backup erstellt werden soll, sollte wie folgt vorgegangen werden:
 * **Letztes Backup** - Vollständiges Backup der Seite zum Jahresende 2017
 
 ## Versionen
-In diesem Bereich wird beschreiben welche Änderungen bzw. Anpassungen an der Seite vorgenommen werden, dies soll dazu dienen nachzuvollziehen, was wann verändert wurde. Dazu wird ein für jedes Update ein Titel vergeben das beim Commit übermittelt werdedn muss. Jeder Commit wird zusätzlich mit einer Versionsnummer versehen. Diese Nummer ist wie folgt aufgebaut: X.0.0 - beschreibt welche Version es ist, wird also genutzt wenn z.B. ein Redesign durchgeführt werden soll das Umfangreiche Änderungen zur folge hat, 0.X.0 - beschreibt wenn Erweiterungen der Seite hinzugefügt werden, 0.0.X - beschreib kleine BugFixes oder Verbesserungen die jedoch keine Erweiterung der Funktionalität zur folge hat.
+Sofern dieses Repository auf den Webserver deployed wird, so sollte eine Release vorgenommen werden. Sofern eine gewisse Anzahl an Änderurngen vorliegt sollte in regelmäßigen abständen ein Release vorgenommen werden. Dies dient der Übersicht über den Aktuellen zustand der Versionen.
 
-#### Version - V.0.0.0 - Beta
-* **PAGE:** Die Seite wurde das erste mal mit fast allen Funktionen veröffentlicht.
-* **FRONTEND:** Frontend basiertes Update wurde durchgeführt.
-* **FRONTEND:** Kleine Anpassungen am Layout, neue Farben, Größen und Mobile Richtlinien.
-* **BACKEND:** Zusätzliche Funktionalität im vergleich zu der "Test-Version" wurde hinzugefügt.
-
-#### Version - V.0.1.0 - Campus Rework
-* **FRONTEND:** Logo im Footer wurde verändert, dazu wurde ein neues SVG verlinkt.
-* **CAMPUS:** Campus Layout wurde überarbeitet und durch ein neues Mask Element Erweitert.
-* **CAMPUS:** Kleine Anpassungen an Abständen.
-
-#### Version - V.0.2.0 - Campus Rework
-* **FRONTEND:** Kleine Anpassungen auf der ganzen Seite.
-* **BUGFIX:** Termine auf der Startsite.
-* **BUGFIX:** Mobiles Menü.
-* **BACKEND:** Backend layouts Erweiterrung.
-
-#### Version - V.1.0.1 - META Update & SEO Stuff
-* **PAGE:** H1 wurde eingefügt.
-* **SEO:** eitentitel wurde verbessert.
-
-#### Version - V.1.0.2 - Inhaltliche Verbesserungen
-* **STUDIENGÄNGE:** CTA bei dern Studiengängen wurde zu "Alle Infos" geändert.
-* **STUDIENGÄNGE:** Abstand bei den Studiengängen wurde reduziert, sieht jetzt so aus wie bei Campus.
-
-#### Version - V.1.0.3 - Meta Erweiterrungen & Inhaltliche Verbesserungen
-* **META:** Das Plug-In RealURL wurde hinzugefügt.
-* **META:** Favicon wurde in die Meta-Tags aufgenommen.
-* **CAMPUS:** Bei Campus wurde so erweitert das bei "campusbasis.html" jetzt der Name des Buttons frei vergeben werden kann.
-
-#### Version - V.1.1.0 - Filter Projekte
-* **FRONTEND:** Button wurden Global auf eine min-width gesetzt, damit auch kleine button genug Aufmerksamkeit bekommen.
-* **FRONTEND:** Erweiterung der Funktionalität der Projekt Seite durch die Möglichkeit den Inhalt zu Filtern.
-
-#### Version - V.1.2.0 - Campus Filter
-* **FILTER:** Schatten wird von den Elementen genommen, nur bei Hover wird dieser jetzt gezeigt.
-* **FRONTEND:** Erweiterung der Funktionalität der Campus Seite durch die Möglichkeit den Inhalt zu Filtern.
-* **STARTSEITE:** Termine werden nur angezeigt wenn es Termine gibt.
-
-#### Version - V.1.2.1 - Campus Filter, Logo Hover & Effekte
-* **FILTER:** Rechtschreibfehler verbessert.
-* **HEADER:** Logo verändert die Farbe beim Hover über den Menüpunkt
-* **FRONTEND:** Fade & Slide Effekte werden beim Scrollen auf der Seite ausgelöst.
-
-#### Version - V.1.2.2 - BUGFIX
-* **FILTER:** MusicDesign wurde auf der Projekt Filter Seite zu Music Design umbenannt.
+Dabei sollte in dem Release genau beschreiben werden was verändert wurded sodas es leicht nachvollziehbar ist. Wichtig ist hierbei das im oberen Bereich dieses Repository hinterlegt ist, welcher Release grade Online auf dem Server liegt. So kann auf einen Blick von jedem gesehen werden ob grade alles Funktioniert oder nicht.
