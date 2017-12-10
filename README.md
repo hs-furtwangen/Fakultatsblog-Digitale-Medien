@@ -34,7 +34,7 @@ Um das Design der Seite bearbeiten zu können werden einige Funktionen/Tools gen
 * **JavaScript/jQuery** Für diverse Effekte sowie verschiedene Berechnungen und Funktionen wird auf der Seite JavaScript bzw. das Framework jQuery verwendet. In Zukunft soll jedoch versucht werden JavaScript nach dem ES6 Standart zu verwenden und auf das Framework jQuery zu verzichten. Auf diese Weise soll die Performance der Seite verbessert werden.
 
 ## Template Aufbau
-In diesem Bereich findet sich eine komplette Zusammenfassung des Aufbaus des Tempaltes.
+In diesem Bereich findet sich eine komplette Zusammenfassung des Aufbaus des Tempaltes. Die Datein liegen auf dem Server in dem Verzeichnis ```\typo3conf\ext\template/```.
 
 ### Grundlagen
 Bei Typo3 handelt es sich um ein Content Management System das es ermöglicht einfach und ohne großen Aufwand Inhalte auf einer Website zu verändern. Dazu ist es wichtig das es korrekt aufgebaut wird. Daher liegen in diesem Repository alle Files die zum Aufbau der Seite gebraucht werden.
