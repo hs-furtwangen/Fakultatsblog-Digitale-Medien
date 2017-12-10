@@ -42,7 +42,11 @@ Bei Typo3 handelt es sich um ein Content Management System das es ermöglicht ei
 ### Struktur
 In den Verzeichnissen *content, html, partials* findst du die Sturktur der Website. Also die HTML Bausteine die gebraucht werden um die Website Dynamisch zu generieren. Dabei sind die Bausteine unter *content* Inhaltsbausteine die von dem Mask Plug-In verwendent werden. Hier werden die Inhalte wie Projekte usw. erstellt und verwaltet. In dem *html* Verzeichnis sind die eigentlichen Templates der Unterschiedlichen Seiten hinterlegt. Dabei werden die eigentlichen Inhalte der Seiten über die *content* sowie die *partials* erstellt die in die Dokumente in *html* hineingeladen werden.
 
-Bei *partials* handelt es sich um Template bestandteile die Dynamisch auf jeder Seite geladen werden. Also Elemente die auf der gesamten Website gleich sind. Wie z.B. Footer oder Head Bereiche. Solche Bereiche werden über z.B. ```TypoScript <f:render partial="header" arguments="{_all}" />``` in die *html* Datein geladen.
+Bei *partials* handelt es sich um Template bestandteile die Dynamisch auf jeder Seite geladen werden. Also Elemente die auf der gesamten Website gleich sind. Wie z.B. Footer oder Head Bereiche. Solche Bereiche werden über TypoScript wie z.B. ``` <f:render partial="header" arguments="{_all}" />``` in die *html* Datein geladen. Mehr Informationen zu TypoScript findest du in der Offiziellen Dokumentation von Typo3. [Zur Ddokumentation](https://typo3.org/documentation/)
+
+Sofern Grafiken wie Icons, Schaubilder oder Grafische Element geladen werden. So sollten diese in dem *img* Verzeichnis hinterlegt werden. Wenn es sich dabei nicht um Fotografische Elemente handelt, muss die Grafik als SVG Datei hinzugefügt werden.
+
+Änderungen an CSS oder JS Datein kann nur mithilfe eines Taskrunners durfgeführt werden. Da es sich bei der Website um Minifizierte bzw. Compilierte Datein handelt. Dies bedeutet das z.B. Änderungen an einer CSS Datei in dem *SASS* Verzeichnis an den SASS Datein durchgeführt werden muss. In dem *CSS* Verzeichnis liegen also nur die *Build* Datei, die aus den SASS Datein erstellt wurde.
 
 ## Genutzte Plug-In's:
 Um zu verstehen wie die Seite aufgebaut ist, bzw. welche Funktionen die Seite besitzt ist es wichtig das hier hinterlegt wird welche Funktion von Externen Plug-In's übernommen werden. Dazu sollte sofern ein Plug-In Verwendet wird
