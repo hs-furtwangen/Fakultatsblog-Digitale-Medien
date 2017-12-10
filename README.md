@@ -1,4 +1,4 @@
-[![GitHub (pre-)release](https://img.shields.io/github/release/qubyte/rubidium/all.svg?style=for-the-badge)]()
+[![Release](https://img.shields.io/github/release/qubyte/rubidium/all.svg?style=for-the-badge)]()
 
 # Fakultatsblog-Digitale-Medien
 Entwicklungsbeschreibung des [Fakultätsblogs](http://digitalemedien-furtwangen.de) der Fakultät Digitale Medien der Hochschule Furtwangen. In diesem Repository werden alle Informationen hinterlegt die mit der Verwaltung sowie der Erweiterung der Webstie benötigt werden. Der Aktuelle Ansprechpartner der Website ist @Unleashed-Design bzw. Johannes Schiel.
