@@ -18,8 +18,8 @@ Für die Arbeit mit diesem Repository ist es wichtig das einige Regeln eingehalt
 1. Es dürfen keine Änderungen an Typo3 Datein vorgenommen werden die Außerhalb dieses Repositorys auf dem Server liegen. Da diese Änderungen nicht übernommen werden sofern Typo3 ein Update durchführt.
 2. Man sollte im Code Änderungen möglichst genau Kommentieren, denkt immer daran Ihr Seit nicht die einzigen die an dieser Website arbeiten werden.
 3. Es sollten nur Minifizierte Datein verwendet werden.
-4. Nach einem Erfolgreichen Update der Seite sollte kontrolliert werden ob die Seite Valide ist. Hierzu sollten Test mithilfe der website und durchgeführt werden.
-5. Wenn größere Inhaltliche Änderungen durchgeführt werden sollte kontrolliert werden ob die Ladezeiten der Seite ok sind. Hierzu eignen sich die Programme und . Sofern hier Fehler oder Probleme auftauchen sollten diese Behoben werden.
+4. Nach einem Erfolgreichen Update der Seite sollte kontrolliert werden ob die Seite Valide ist. Hierzu sollten Test mithilfe der Websites [HTML Validator](https://validator.w3.org/) und [CSS Validator](https://jigsaw.w3.org/css-validator/) durchgeführt werden.
+5. Wenn größere Inhaltliche Änderungen durchgeführt werden sollte kontrolliert werden ob die Ladezeiten der Seite ok sind. Hierzu eignen sich die Programme  [Pingdom Speed Test](https://tools.pingdom.com/) und [Google Pagespeed](https://developers.google.com/speed/pagespeed/insights/) . Sofern hier Fehler oder Probleme auftauchen sollten diese Behoben werden.
 
 #### Zugangsdaten
 Alle Zugangsdaten zu User Accounts, FTP Zugängen, Host Zugang usw. werden bei Übergabe des HiWi Jobs übergeben und werden nicht in diesem Repository gespeichert. Alle Zugsangsdaten werden als .TXT Datei übergeben und sofern diese Erweitert werden z.B. neue Backend Benutzer usw. sollten diese in die .TXT Datei eingetragen werden. Aktuell besitzt @Unleashed-Design die Zugangsdaten sofern also Fragen oder Probleme auftauchen sollten, sollte sich an ihn gewendet werden.
@@ -36,14 +36,24 @@ Um das Design der Seite bearbeiten zu können werden einige Funktionen/Tools gen
 ## Template Aufbau
 In diesem Bereich findet sich eine komplette Zusammenfassung des Aufbaus des Tempaltes.
 
+### Grundlagen
+Bei Typo3 handelt es sich um ein Content Management System das es ermöglicht einfach und ohne großen Aufwand Inhalte auf einer Website zu verändern. Dazu ist es wichtig das es korrekt aufgebaut wird. Daher liegen in diesem Repository alle Files die zum Aufbau der Seite gebraucht werden.
+
+### Struktur
+In den Verzeichnissen *content, html, partials* findst du die Sturktur der Website. Also die HTML Bausteine die gebraucht werden um die Website Dynamisch zu generieren. Dabei sind die Bausteine unter *content* Inhaltsbausteine die von dem Mask Plug-In verwendent werden. Hier werden die Inhalte wie Projekte usw. erstellt und verwaltet. In dem *html* Verzeichnis sind die eigentlichen Templates der Unterschiedlichen Seiten hinterlegt. Dabei werden die eigentlichen Inhalte der Seiten über die *content* sowie die *partials* erstellt die in die Dokumente in *html* hineingeladen werden.
+
+Bei *partials* handelt es sich um Template bestandteile die Dynamisch auf jeder Seite geladen werden. Also Elemente die auf der gesamten Website gleich sind. Wie z.B. Footer oder Head Bereiche. Solche Bereiche werden über z.B. ```TypoScript <f:render partial="header" arguments="{_all}" />``` in die *html* Datein geladen.
+
 ## Genutzte Plug-In's:
 Um zu verstehen wie die Seite aufgebaut ist, bzw. welche Funktionen die Seite besitzt ist es wichtig das hier hinterlegt wird welche Funktion von Externen Plug-In's übernommen werden. Dazu sollte sofern ein Plug-In Verwendet wird
 
 #### Mask
-Dasa Mask Plug-In ist die wichtigste Komponente die in dieser Website Verwendet wird.
+Das [Mask](https://extensions.typo3.org/extension/mask/) Plug-In ist die wichtigste Komponente die in dieser Website Verwendet wird. Es ermöglicht die Überarbeitung der Website bzw. das erstellung von Eigenen Content Elementen mit Custom Feldern. So kann man die Verwaltung der Seite stark vereinfachen und sicherstellen das jeder die Website verwalten kann.
+
+In dem Repesitory unter dem Verezichnis *content* findet man die HTML Bausteine die zu Bausteinen des Mask Plug-In's werden. Sofern also neue Elemente erstellt werdedn sollen müssen diese hier hinterlegt werden. Eine Anleitung zur Arbeit mit dem Mask Plug-In findest du [hier](https://jweiland.net/video-anleitungen/typo3/interessante-typo3-extensions/mask.html).
 
 #### Speaking URLs
-Dieses Plug-In übernimmt die Verwaltung und das Überschreiben von Lesbaren URLs. Die Einstellungen dazu finden sich auf dem Server im Backend unter dem Menüpunkt **Speaking URLs**
+Das Plug-In [Speaking URLs](https://extensions.typo3.org/extension/realurl/) übernimmt die Verwaltung und das Überschreiben von Lesbaren URLs. Die Einstellungen dazu finden sich auf dem Server im Backend unter dem Menüpunkt **Speaking URLs**
 
 ## Backup Versionen
 Um eine möglichst sichere Entwicklungsumgebung herzustellen sollte nach der Regel vorgegangen werden nach allen "größeren" Änderrungen ein Komplettes Backup der Seite zu erstellen. Gründe für ein Backup:
