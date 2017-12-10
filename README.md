@@ -1,4 +1,4 @@
-![Status](https://img.shields.io/badge/Status-stable-brightgreen.svg?style=for-the-badge) ![Release](https://img.shields.io/badge/Online Verion-1.0.0-brightgreen.svg?style=for-the-badge) ![Update](https://img.shields.io/badge/Update-11.12.2017-blue.svg?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-stable-brightgreen.svg?style=for-the-badge) ![Release](https://img.shields.io/badge/Online-Verion-1.0.0-brightgreen.svg?style=for-the-badge) ![Update](https://img.shields.io/badge/Update-11.12.2017-blue.svg?style=for-the-badge)
 
 
 # Fakultatsblog Digitale Medien
