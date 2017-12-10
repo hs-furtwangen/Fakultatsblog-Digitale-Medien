@@ -1,16 +1,25 @@
 # Fakultatsblog-Digitale-Medien
-Entwicklungsbeschreibung des Fakultätsblogs der Fakultät Digitale Medien der Hochschule Furtwangen.
+Entwicklungsbeschreibung des [Fakultätsblogs](http://digitalemedien-furtwangen.de) der Fakultät Digitale Medien der Hochschule Furtwangen.
 
-## Zusammenfassung
-In diesem Repository befindet sich das Template das auf der Website zum Einsatz kommt. Dazu
+## Ansprechpartner
+Hier werden alle Ansprechpartner die für die Verwaltung der Seite Verantwortlich waren/sind aufgelistet. Dabei sollen hier Private E-Mail Adressen hinterlegt werden sofern Fragen entstehen die nach dem Abschluss bei der Fakultät beantwortet werden müssten.
 
+#### Johannes Schiel/ 03.2017 - heute / johannes.schiel@outlook.de
+
+## Technischer Aufbau des Themes
+In diesem Repository findet Ihr alle Informationen die dazu dienen die Website bzw. das Template des Fakultatsblogs zu verwalten. Dazu wird im folgenden Erklärt wie das Template aufgebaut ist und was damit gemacht werden muss. Jedoch wird die Kenntniss des Grundaufbaus von Typo3 vorrausgesetzt und nicht näher beschreiben.
+
+#### Zugangsdaten
+Alle Zugangsdaten zu User Accounts, FTP Zugängen, Host Zugang usw. werden bei Übergabe des HiWi Jobs übergeben und werden nicht in diesem Repository gespeichert. Aktuell besitzt @Unleashed-Design die Zugangsdaten sofern also Fragen oder Probleme auftauchen sollten, sollte sich an ihn gewendet werden.
+
+#### Techniken
 Um das Design der Seite bearbeiten zu können werden einige Funktionen/Tools genutzt. Diese wären:
 
-* Gulp (Taskrunner)
-* SASS (CSS)
-* TypoScript
-* HTML/HTML5
-* JavaScript/jQuery
+* **Gulp** Gulp ist nicht zwingend nötig um das Template zu bearbeiten jedoch muss ein Taskrunner vorhanden sein um die Seite korrekt zu überarbeiten. Dieser Taskrunner muss SASS files sowie JS Files kompilieren können.
+* **SASS** Auf der Seite wird nur eine CSS Datei eingebunden diese wird mithilfe des CSS Preprozessors SASS erstsellt. Daher sollte auch nur in den SASS Datein Änderungen vorgenommen werden. CSS Datein dürfen aus diesem Grund nicht Manuel überarbeitet werden.
+* **TypoScript** In Typo3 wird eine eigene Sprache verwendet das sog. TypoScript, dieses dient der Ausgabe von Informationen sowie dem Verwalten bzw. Arbeiten mit diesen. Alle Datein die dazu benötigt werden finden sich in dem 'ts' Verzeichnis in diesem Repository. TypoScript ersetzt im wesentlichen alles was normalerweile von PHP oder Python übernommen wird.
+* **HTML/HTML5** Die Gesamte Struktur der Seite wird mithilfe von HTML bzw. HTML5 aufgebaut. Dazu sollen mögichst wenig Elemente erstellt werden. Was die Ladezeit der Seite möglichst minimal halten soll.
+* **JavaScript/jQuery** Für diverse Effekte sowie verschiedene Berechnungen und Funktionen wird auf der Seite JavaScript bzw. das Framework jQuery verwendet. In Zukunft soll jedoch versucht werden JavaScript nach dem ES6 Standart zu verwenden und auf das Framework jQuery zu verzichten. Auf diese Weise soll die Performance der Seite verbessert werden.
 
 Desweiteren ist die Seite durch ein eigenes Template entwickelt worden, dieses bietet alle Möglichkeiten der Erweiterung und ist wie Folgt aufgebaut:
 
@@ -42,24 +51,24 @@ Um eine möglichst sichere Entwicklungsumgebung herzustellen sollte nach der Reg
 * Wenn viele Inhalte auf der Seite verändert wurde z.B. diverse neue Projekte erstellt wurden.
 * Nach großen Änderrungen am Strukturellen Aufbau der Seite
 
-* 23.07.2017 - Datenbank & FTP Datein - Johannes Schiel
+* 23.07.2017 - **Datenbank & FTP Datein** - Johannes Schiel
 
 ## Versionen
 In diesem Bereich wird beschreiben welche Änderungen bzw. Anpassungen an der Seite vorgenommen werden, dies soll dazu dienen nachzuvollziehen, was wann verändert wurde. Dazu wird ein für jedes Update ein Titel vergeben das beim Commit übermittelt werdedn muss. Jeder Commit wird zusätzlich mit einer Versionsnummer versehen. Diese Nummer ist wie folgt aufgebaut: X.0.0 - beschreibt welche Version es ist, wird also genutzt wenn z.B. ein Redesign durchgeführt werden soll das Umfangreiche Änderungen zur folge hat, 0.X.0 - beschreibt wenn Erweiterungen der Seite hinzugefügt werden, 0.0.X - beschreib kleine BugFixes oder Verbesserungen die jedoch keine Erweiterung der Funktionalität zur folge hat.
 
 #### Version - V.0.0.0 - Beta
-* PAGE: Die Seite wurde das erste mal mit fast allen Funktionen veröffentlicht.
-* FRONTEND: Frontend basiertes Update wurde durchgeführt.
-* FRONTEND: Kleine Anpassungen am Layout, neue Farben, Größen und Mobile Richtlinien.
-* BACKEND: Zusätzliche Funktionalität im vergleich zu der "Test-Version" wurde hinzugefügt.
+* **PAGE:** Die Seite wurde das erste mal mit fast allen Funktionen veröffentlicht.
+* **FRONTEND:** Frontend basiertes Update wurde durchgeführt.
+* **FRONTEND:** Kleine Anpassungen am Layout, neue Farben, Größen und Mobile Richtlinien.
+* **BACKEND:** Zusätzliche Funktionalität im vergleich zu der "Test-Version" wurde hinzugefügt.
 
 #### Version - V.0.1.0 - Campus Rework
-* FRONTEND: Logo im Footer wurde verändert, dazu wurde ein neues SVG verlinkt.
-* CAMPUS: Campus Layout wurde überarbeitet und durch ein neues Mask Element Erweitert.
-* CAMPUS: Kleine Anpassungen an Abständen.
+* **FRONTEND:** Logo im Footer wurde verändert, dazu wurde ein neues SVG verlinkt.
+* **CAMPUS:** Campus Layout wurde überarbeitet und durch ein neues Mask Element Erweitert.
+* **CAMPUS:** Kleine Anpassungen an Abständen.
 
 #### Version - V.0.2.0 - Campus Rework
-* FRONTEND: Kleine Anpassungen auf der ganzen Seite.
+* **FRONTEND:** Kleine Anpassungen auf der ganzen Seite.
 * BUGFIX: Termine auf der Startsite.
 * BUGFIX: Mobiles Menü.
 * BACKEND: Backend layouts Erweiterrung.
