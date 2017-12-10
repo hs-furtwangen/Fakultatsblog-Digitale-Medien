@@ -1,5 +1,7 @@
-![Status](https://img.shields.io/badge/Status-stable-brightgreen.svg?style=for-the-badge) ![Release](https://img.shields.io/badge/Online-v1.0.0-brightgreen.svg?style=for-the-badge)
-![Backup](https://img.shields.io/badge/Backup-11.12.2017-blue.svg?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen.svg?style=for-the-badge)
+![Backup](https://img.shields.io/badge/Backup-none-red.svg?style=for-the-badge)
+![Valide](https://img.shields.io/badge/Valide-Bestanden-brightgreen.svg?style=for-the-badge)
+![Speedtest](https://img.shields.io/badge/Speedtest-Bestanden-brightgreen.svg?style=for-the-badge) ![Release](https://img.shields.io/badge/Online-v1.1.0-brightgreen.svg?style=for-the-badge)
 
 # Fakultatsblog Digitale Medien
 Entwicklungsbeschreibung des [Fakultätsblogs](http://digitalemedien-furtwangen.de) der Fakultät Digitale Medien der Hochschule Furtwangen. In diesem Repository werden alle Informationen hinterlegt die mit der Verwaltung sowie der Erweiterung der Webstie benötigt werden. Der Aktuelle Ansprechpartner der Website ist @Unleashed-Design bzw. Johannes Schiel.
@@ -40,6 +42,23 @@ In diesem Bereich findet sich eine komplette Zusammenfassung des Aufbaus des Tem
 Bei Typo3 handelt es sich um ein Content Management System das es ermöglicht einfach und ohne großen Aufwand Inhalte auf einer Website zu verändern. Dazu ist es wichtig das es korrekt aufgebaut wird. Daher liegen in diesem Repository alle Files die zum Aufbau der Seite gebraucht werden.
 
 ### Struktur
+
+* ```/backend/```  Basis Ordner für das MASK Plug-In
+* ```/backup/``` Hier liegt das letzte Backup der Seite.
+* ```/content/``` hier liegen alle Elemente die für die Erstellung von Mask Elementen gebraucht werden.
+* ```/css/``` hier liegen die Finalen CSS Files, diese werden auf der Seite eingebunden.
+* ```/html/``` enthält alle HTML Seiten Templates.
+* ```/img/``` hier liegen alle Bilder, Grafiken und Schaubilder.
+* ```/js/``` enthält das auf der Seite genutzt JavaScript.
+    * ```/js/min/``` hier liegt das eingebundene JavaScript File.
+    * ```/js/vendor/``` enthält Script von anderen Seiten oder Frameworks die genutzt werden.
+    * ```/js/work/``` enthält die auf der Seite genutzte JavaScript Files.
+* ```/partials/``` enthält alle wiederholbaren Inhaltstypen wie z.B. Header oder Footer.
+* ```/preview/``` Basis Ordner für das MASK Plug-In
+* ```/sass/``` hier liegen alle SASS Files die für das Aussehen der Seite wichtig sind.
+* ```/ts/``` Hier werden alle Typo3 Scripte hinterlegt.
+* ```/ts/page/``` hier liegt die ```/setup.ts/``` diese Datei Steuert die gesamte Seite mithilfe von Typescript.
+
 In den Verzeichnissen ```/content/```, ```/html/``` und ```/partials/``` findst du die Sturktur der Website. Also die HTML Bausteine die gebraucht werden um die Website Dynamisch zu generieren. Dabei sind die Bausteine unter ```/content/``` Inhaltsbausteine die von dem Mask Plug-In verwendent werden. Hier werden die Inhalte wie Projekte usw. erstellt und verwaltet. In dem ```/html/``` Verzeichnis sind die eigentlichen Templates der Unterschiedlichen Seiten hinterlegt. Dabei werden die eigentlichen Inhalte der Seiten über die ```/content/``` sowie die ```/partials/``` erstellt die in die Dokumente in ```/html/``` hineingeladen werden.
 
 Bei ```/partials/``` handelt es sich um Template bestandteile die Dynamisch auf jeder Seite geladen werden. Also Elemente die auf der gesamten Website gleich sind. Wie z.B. Footer oder Head Bereiche. Solche Bereiche werden über TypoScript wie z.B. ``` <f:render partial="header" arguments="{_all}" />``` in die ```/html/``` Datein geladen. Mehr Informationen zu TypoScript findest du in der Offiziellen Dokumentation von Typo3. [Zur Ddokumentation](https://typo3.org/documentation/)
