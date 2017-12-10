@@ -39,17 +39,17 @@ In diesem Bereich findet sich eine komplette Zusammenfassung des Aufbaus des Tem
 Bei Typo3 handelt es sich um ein Content Management System das es ermöglicht einfach und ohne großen Aufwand Inhalte auf einer Website zu verändern. Dazu ist es wichtig das es korrekt aufgebaut wird. Daher liegen in diesem Repository alle Files die zum Aufbau der Seite gebraucht werden.
 
 ### Struktur
-In den Verzeichnissen ```content```, ```html``` und ```partials``` findst du die Sturktur der Website. Also die HTML Bausteine die gebraucht werden um die Website Dynamisch zu generieren. Dabei sind die Bausteine unter ```content``` Inhaltsbausteine die von dem Mask Plug-In verwendent werden. Hier werden die Inhalte wie Projekte usw. erstellt und verwaltet. In dem ```html``` Verzeichnis sind die eigentlichen Templates der Unterschiedlichen Seiten hinterlegt. Dabei werden die eigentlichen Inhalte der Seiten über die ```content``` sowie die ```partials``` erstellt die in die Dokumente in ```html``` hineingeladen werden.
+In den Verzeichnissen ```/content/```, ```/html/``` und ```/partials/``` findst du die Sturktur der Website. Also die HTML Bausteine die gebraucht werden um die Website Dynamisch zu generieren. Dabei sind die Bausteine unter ```/content/``` Inhaltsbausteine die von dem Mask Plug-In verwendent werden. Hier werden die Inhalte wie Projekte usw. erstellt und verwaltet. In dem ```/html/``` Verzeichnis sind die eigentlichen Templates der Unterschiedlichen Seiten hinterlegt. Dabei werden die eigentlichen Inhalte der Seiten über die ```/content/``` sowie die ```/partials/``` erstellt die in die Dokumente in ```/html/``` hineingeladen werden.
 
-Bei ```partials``` handelt es sich um Template bestandteile die Dynamisch auf jeder Seite geladen werden. Also Elemente die auf der gesamten Website gleich sind. Wie z.B. Footer oder Head Bereiche. Solche Bereiche werden über TypoScript wie z.B. ``` <f:render partial="header" arguments="{_all}" />``` in die ```html``` Datein geladen. Mehr Informationen zu TypoScript findest du in der Offiziellen Dokumentation von Typo3. [Zur Ddokumentation](https://typo3.org/documentation/)
+Bei ```/partials/``` handelt es sich um Template bestandteile die Dynamisch auf jeder Seite geladen werden. Also Elemente die auf der gesamten Website gleich sind. Wie z.B. Footer oder Head Bereiche. Solche Bereiche werden über TypoScript wie z.B. ``` <f:render partial="header" arguments="{_all}" />``` in die ```/html/``` Datein geladen. Mehr Informationen zu TypoScript findest du in der Offiziellen Dokumentation von Typo3. [Zur Ddokumentation](https://typo3.org/documentation/)
 
-Sofern Grafiken wie Icons, Schaubilder oder Grafische Element geladen werden. So sollten diese in dem ```img```  Verzeichnis hinterlegt werden. Wenn es sich dabei nicht um Fotografische Elemente handelt, muss die Grafik als SVG Datei hinzugefügt werden.
+Sofern Grafiken wie Icons, Schaubilder oder Grafische Element geladen werden. So sollten diese in dem ```/img/```  Verzeichnis hinterlegt werden. Wenn es sich dabei nicht um Fotografische Elemente handelt, muss die Grafik als SVG Datei hinzugefügt werden.
 
-Änderungen an CSS Datein kann nur mithilfe eines Taskrunners durfgeführt werden. Da es sich bei der Website um Minifizierte bzw. Compilierte Datein handelt. Dies bedeutet das z.B. Änderungen an einer CSS Datei in dem ```sass``` Verzeichnis an den SASS Datein durchgeführt werden muss. In dem ```css```  Verzeichnis liegen also nur die *Build* Datei, die aus den SASS Datein erstellt wurde. Es sollte immer eine ```min-style.css``` und eine ```style.css``` Datei erstellt werden, um die Übersicht über den CSS Code zu gewährleisten auch wenn kein SASS genutzt werden kann. Dabei ist es wichtig.
+Änderungen an CSS Datein kann nur mithilfe eines Taskrunners durfgeführt werden. Da es sich bei der Website um Minifizierte bzw. Compilierte Datein handelt. Dies bedeutet das z.B. Änderungen an einer CSS Datei in dem ```/sass/``` Verzeichnis an den SASS Datein durchgeführt werden muss. In dem ```/css/```  Verzeichnis liegen also nur die *Build* Datei, die aus den SASS Datein erstellt wurde. Es sollte immer eine ```/min-style.css/``` und eine ```/style.css/``` Datei erstellt werden, um die Übersicht über den CSS Code zu gewährleisten auch wenn kein SASS genutzt werden kann. Dabei ist es wichtig.
 
-JavaScript Datein liegen im ```js``` Verzeichnis auf dem Server dort sind drei Unterverzeichnisse hinterlegt. ```min``` beinhaltet die Komprimierte und Zusammengefasste Datei die später auf dem Frontend eingebunden wird. ```vendor``` beinhaltet externe Scripte wie z.B. jQuery. ```work``` beinhaltet die JavaScript Bausteine die für die Seite geschreiben wurden.   
+JavaScript Datein liegen im ```/js/``` Verzeichnis auf dem Server dort sind drei Unterverzeichnisse hinterlegt. ```/min/``` beinhaltet die Komprimierte und Zusammengefasste Datei die später auf dem Frontend eingebunden wird. ```/vendor/``` beinhaltet externe Scripte wie z.B. jQuery. ```/work/``` beinhaltet die JavaScript Bausteine die für die Seite geschreiben wurden.   
 
-JavScript und CSS Datein werden per TypeScript genauer gesagt über die ```ts/page/setup.ts``` Datei in das Frontend der Website geladen. Es werden keine Verlinkungen oder Ähnliches gebraucht.
+JavScript und CSS Datein werden per TypeScript genauer gesagt über die ```/ts/page/setup.ts``` Datei in das Frontend der Website geladen. Es werden keine Verlinkungen oder Ähnliches gebraucht.
 
 ## Genutzte Plug-In's:
 Um zu verstehen wie die Seite aufgebaut ist, bzw. welche Funktionen die Seite besitzt ist es wichtig das hier hinterlegt wird welche Funktion von Externen Plug-In's übernommen werden. Dazu sollte sofern ein Plug-In Verwendet wird
@@ -57,7 +57,7 @@ Um zu verstehen wie die Seite aufgebaut ist, bzw. welche Funktionen die Seite be
 #### Mask
 Das [Mask](https://extensions.typo3.org/extension/mask/) Plug-In ist die wichtigste Komponente die in dieser Website Verwendet wird. Es ermöglicht die Überarbeitung der Website bzw. das erstellung von Eigenen Content Elementen mit Custom Feldern. So kann man die Verwaltung der Seite stark vereinfachen und sicherstellen das jeder die Website verwalten kann.
 
-In dem Repesitory unter dem Verezichnis *content* findet man die HTML Bausteine die zu Bausteinen des Mask Plug-In's werden. Sofern also neue Elemente erstellt werdedn sollen müssen diese hier hinterlegt werden. Eine Anleitung zur Arbeit mit dem Mask Plug-In findest du [hier](https://jweiland.net/video-anleitungen/typo3/interessante-typo3-extensions/mask.html).
+In dem Repesitory unter dem Verezichnis ```/content/``` findet man die HTML Bausteine die zu Bausteinen des Mask Plug-In's werden. Sofern also neue Elemente erstellt werdedn sollen müssen diese hier hinterlegt werden. Eine Anleitung zur Arbeit mit dem Mask Plug-In findest du [hier](https://jweiland.net/video-anleitungen/typo3/interessante-typo3-extensions/mask.html).
 
 #### Speaking URLs
 Das Plug-In [Speaking URLs](https://extensions.typo3.org/extension/realurl/) übernimmt die Verwaltung und das Überschreiben von Lesbaren URLs. Die Einstellungen dazu finden sich auf dem Server im Backend unter dem Menüpunkt **Speaking URLs**
@@ -71,8 +71,8 @@ Um eine möglichst sichere Entwicklungsumgebung herzustellen sollte nach der Reg
 
 #### Vorgehen bei einem Backup
 Wenn ein Backup erstellt werden soll, sollte wie folgt vorgegangen werden:
-1. Download alle FTP Datein, anschließend sollten diese als ZIP Datei mit dem Namen 'YYYYMMDD_FTP.ZIP' in das *backup* Verzeichnis in diesem Repository hinterlegt werden.
-2. Download der Datenbank über MySQL als ZIP Datei. Diese sollte auch mit ddem Namen 'YYYYMMDD_DATENBANK.ZIP' in das *backup* Verzeichnis in diesem Repository hinterlegt werden.
+1. Download alle FTP Datein, anschließend sollten diese als ZIP Datei mit dem Namen 'YYYYMMDD_FTP.ZIP' in das ```/backup/``` Verzeichnis in diesem Repository hinterlegt werden.
+2. Download der Datenbank über MySQL als ZIP Datei. Diese sollte auch mit ddem Namen 'YYYYMMDD_DATENBANK.ZIP' in das ```/backup/``` Verzeichnis in diesem Repository hinterlegt werden.
 
 * **Letztes Backup** - Vollständiges Backup der Seite zum Jahresende 2017
 
