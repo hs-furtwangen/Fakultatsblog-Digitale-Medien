@@ -1,7 +1,8 @@
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen.svg?style=for-the-badge)
 ![Backup](https://img.shields.io/badge/Backup-none-red.svg?style=for-the-badge)
 ![Valide](https://img.shields.io/badge/Valide-Bestanden-brightgreen.svg?style=for-the-badge)
-![Speedtest](https://img.shields.io/badge/Speedtest-Bestanden-brightgreen.svg?style=for-the-badge) ![Release](https://img.shields.io/badge/Online-v1.1.0-brightgreen.svg?style=for-the-badge)
+![Speedtest](https://img.shields.io/badge/Speedtest-Bestanden-brightgreen.svg?style=for-the-badge)
+![Release](https://img.shields.io/badge/Online-v1.1.0-brightgreen.svg?style=for-the-badge)
 
 # Fakultatsblog Digitale Medien
 Entwicklungsbeschreibung des [Fakultätsblogs](http://digitalemedien-furtwangen.de) der Fakultät Digitale Medien der Hochschule Furtwangen. In diesem Repository werden alle Informationen hinterlegt die mit der Verwaltung sowie der Erweiterung der Webstie benötigt werden. Der Aktuelle Ansprechpartner der Website ist @Unleashed-Design bzw. Johannes Schiel.
