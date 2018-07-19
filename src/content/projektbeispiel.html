@@ -1,0 +1,16 @@
+
+<div class="inhalt">
+  <f:if condition="{data.header}">
+    <h3>{data.header}<br>
+      <f:if condition="{data.subheader}">
+        <span>{data.subheader}</span>
+      </f:if>
+    </h3>
+  </f:if>
+
+  <f:if condition="{data.image}">
+    <f:for each="{data.image}" as="file">
+      <div class="projekt-box-background" style="background-image: url(fileadmin{file.identifier});"></div>
+    </f:for>
+  </f:if>
+</div>

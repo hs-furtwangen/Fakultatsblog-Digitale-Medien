@@ -1,0 +1,17 @@
+<f:render partial="header" arguments="{_all}" />
+
+  <section id="content" class="page">
+
+    <div class="ankundigungen">
+
+      <f:format.raw>{seitentitle}</f:format.raw>
+
+      <f:render partial="Filter-Campus" arguments="{_all}" />
+
+      <f:format.raw>{content}</f:format.raw>
+
+    </div>
+
+  </section>
+
+<f:render partial="footer" arguments="{_all}" />

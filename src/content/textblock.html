@@ -1,0 +1,8 @@
+
+<h2><f:if condition="{data.header}">
+{data.header}<br />
+</f:if></h2>
+<article>
+<f:if condition="{data.bodytext}">
+<f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.bodytext}</f:format.html><br />
+</f:if></article>

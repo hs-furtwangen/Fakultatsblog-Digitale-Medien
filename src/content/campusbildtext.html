@@ -1,0 +1,18 @@
+
+<f:if condition="{data.image}">
+  <f:for each="{data.image}" as="file">
+    <article class="campus-element campus-bild-text" style="background-image: url(fileadmin/{file.identifier})">
+  </f:for>
+</f:if>
+
+  <f:if condition="{data.header}">
+    <h2>{data.header}</h2>
+  </f:if>
+
+  <f:if condition="{data.tx_mask_campuslinkbildtext}">
+    <a target="_blank" class="button" href="{data.tx_mask_campuslinkbildtext}">Mehr Informationen</a>
+  </f:if>
+
+  <div class="overlay"></div>
+
+</article>

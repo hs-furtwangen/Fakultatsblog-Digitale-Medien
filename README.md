@@ -43,19 +43,14 @@ In diesem Bereich findet sich eine komplette Zusammenfassung des Aufbaus des Tem
 Bei Typo3 handelt es sich um ein Content Management System das es ermöglicht einfach und ohne großen Aufwand Inhalte auf einer Website zu verändern. Dazu ist es wichtig das es korrekt aufgebaut wird. Daher liegen in diesem Repository alle Files die zum Aufbau der Seite gebraucht werden.
 
 ### Struktur
+Die Struktur des Systems basiert auf Gulp, dies bedeutet das es einmal ein src sog. Source Ordner gibt. Hier liegen alle Dateien die bearbeitet werden können. In dem dist Verzeichnis speichert der Taskrunner Automatisch alle Dokumente die später auf die Website verschoben werden.
 
-* ```/backend/```  Basis Ordner für das MASK Plug-In
-* ```/backup/``` Hier liegt das letzte Backup der Seite.
 * ```/content/``` hier liegen alle Elemente die für die Erstellung von Mask Elementen gebraucht werden.
 * ```/css/``` hier liegen die Finalen CSS Files, diese werden auf der Seite eingebunden.
 * ```/html/``` enthält alle HTML Seiten Templates.
 * ```/img/``` hier liegen alle Bilder, Grafiken und Schaubilder.
-* ```/js/``` enthält das auf der Seite genutzt JavaScript.
-    * ```/js/min/``` hier liegt das eingebundene JavaScript File.
-    * ```/js/vendor/``` enthält Script von anderen Seiten oder Frameworks die genutzt werden.
-    * ```/js/work/``` enthält die auf der Seite genutzte JavaScript Files.
+* ```/js/``` enthält das auf der Seite genutzt JavaScript. Sofern es externe Scripte gibt sollten diese über NPM installiert werden.
 * ```/partials/``` enthält alle wiederholbaren Inhaltstypen wie z.B. Header oder Footer.
-* ```/preview/``` Basis Ordner für das MASK Plug-In
 * ```/sass/``` hier liegen alle SASS Files die für das Aussehen der Seite wichtig sind.
 * ```/ts/``` Hier werden alle Typo3 Scripte hinterlegt.
 * ```/ts/page/``` hier liegt die ```/setup.ts/``` diese Datei Steuert die gesamte Seite mithilfe von Typescript.
@@ -71,6 +66,22 @@ Sofern Grafiken wie Icons, Schaubilder oder Grafische Element geladen werden. So
 JavaScript Datein liegen im ```/js/``` Verzeichnis auf dem Server dort sind drei Unterverzeichnisse hinterlegt. ```/min/``` beinhaltet die Komprimierte und Zusammengefasste Datei die später auf dem Frontend eingebunden wird. ```/vendor/``` beinhaltet externe Scripte wie z.B. jQuery. ```/work/``` beinhaltet die JavaScript Bausteine die für die Seite geschreiben wurden.   
 
 JavScript und CSS Datein werden per TypeScript genauer gesagt über die ```/ts/page/setup.ts``` Datei in das Frontend der Website geladen. Es werden keine Verlinkungen oder Ähnliches gebraucht.
+
+### Entwicklungsumgebung Starten & Nutzen
+
+#### Schritt 1: Node Installieren
+Um die Entwicklungsumgebung zu starten muss das Repository auf dem Lokalem System vorhanden sein. Zusätzlich muss NPM(Node Package Manager) installiert werden. Eine Anleitung findest du mit ausführlichen Anweisungen hier: [NPM Install](https://nodejs.org/en/download/)
+
+### Schritt 2: Console Starten
+Wenn Node Installiert ist kann man mit der eigentlichen Umgebung beginnen. In der Console(cmd) muss nun das Verzeichnis angesteuert werden in dem das Repository liegt.
+
+### Schritt 3: NPM Install
+In der Console(cmd) muss nun das Verzeichnis angesteuert werden in dem das Repository liegt. Hier kann nun der Befehl ```npm i``` oder npm ```npm install``` eingegeben werden. Dieser installiert eine Menge Packete die für den Taskrunner Gulp ([Mehr Informationen](https://nodejs.org/en/download/)) genutzt werden.
+
+### Schritt 4: Gulp Installieren & Starten
+Wenn alles fertig installiert ist, kann durch den Befehl ```gulp``` die Entwicklungsumgebung gestartet werden. Es kann sein das hier nichts passiert oder ein Fehler ausgegeben wird. In diesem Fall sollte der Befehl ```npm install gulp --save -g``` in der Console ausgeführt werden.
+
+Wenn Gulp erfolgreich gestartet ist steht in der Console etwas wie ```default```. Dies bedeutet das im Hintergrund das gesamte Verzeichnis überwacht wird. Sofern es z.B. Änderungen an SASS Dateien gibt speichert das System automatisch minifizierte css Dokumente in das dist Verzeichnis.
 
 ## Genutzte Plug-In's:
 Um zu verstehen wie die Seite aufgebaut ist, bzw. welche Funktionen die Seite besitzt ist es wichtig das hier hinterlegt wird welche Funktion von Externen Plug-In's übernommen werden. Dazu sollte sofern ein Plug-In Verwendet wird

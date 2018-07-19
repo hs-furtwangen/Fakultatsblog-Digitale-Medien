@@ -82,15 +82,14 @@ page {
     font = https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900
     font.title = display
     font.media = screen
-    screen = typo3conf/ext/template/css/min-style.css
+    screen = typo3conf/ext/template/css/main.min.css
     screen.title = display
     screen.media = screen
     }
 
   // IMPORT DER JS DATEN (VENDOR/EIGENE)
   includeJSFooter{
-    jquery = typo3conf/ext/template/js/vendor/jquery.js
-    globaljs = typo3conf/ext/template/js/min/min-global.js
+    globaljs = typo3conf/ext/template/js/global.min.js
   }
 }
 

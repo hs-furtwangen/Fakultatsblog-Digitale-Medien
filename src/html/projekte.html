@@ -1,0 +1,19 @@
+<f:render partial="header" arguments="{_all}" />
+
+<f:render partial="hero" arguments="{_all}" />
+
+  <section id="content" class="page page-projekte">
+
+    <section class="projekte-category fadein animation2">
+
+      <f:format.raw>{seitentitle}</f:format.raw>
+
+      <f:render partial="Filter-Projekt" arguments="{_all}" />
+
+      <f:cObject typoscriptObjectPath="lib.getsubpages" />
+
+    </section>
+
+  </section>
+
+<f:render partial="footer" arguments="{_all}" />
