@@ -9,6 +9,7 @@ config {
     linkVars = L(0-3)
     contentObjectExceptionHandler = 0
     noPageTitle = 2
+    extTarget = _blank
   }
 
 page = PAGE
@@ -102,7 +103,15 @@ mainmenu.1 = TMENU
 mainmenu.1 {
   wrap = <ul>|</ul>
   expAll = 0
-  NO.allWrap = <li class="menu-item">|</li>
+  NO {
+    allWrap = <li class="menu-item" >| </li>
+    3 = TEXT
+    3 {
+      field = title
+      typolink.parameter.field = url
+      typolink.extTarget = _blank
+    }
+  }
   RO < .NO
   RO = 1
   CUR < .NO
