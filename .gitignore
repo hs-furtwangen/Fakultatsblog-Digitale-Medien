@@ -2,3 +2,4 @@
 # Ignore several upload and file directories.
 /node_modules
 /.vscode
+/Backup
