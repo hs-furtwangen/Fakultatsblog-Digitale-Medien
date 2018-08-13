@@ -10,7 +10,7 @@ Entwicklungsbeschreibung des [Fakultätsblogs](http://digitalemedien-furtwangen.
 ## Ansprechpartner
 Hier werden alle Ansprechpartner die für die Verwaltung der Seite Verantwortlich waren/sind aufgelistet. Dabei sollen hier Private E-Mail Adressen hinterlegt werden sofern Fragen entstehen die nach dem Abschluss bei der Fakultät beantwortet werden müssten.
 
-#### Johannes Schiel / 03.2017 - heute / johannes.schiel@outlook.de
+#### Johannes Schiel / 03.2017 - 08.2018 / johannes.schiel@outlook.de
 
 ## Technischer Aufbau des Themes
 In diesem Repository findet Ihr alle Informationen die dazu dienen die Website bzw. das Template des Fakultatsblogs zu verwalten. Dazu wird im folgenden Erklärt wie das Template aufgebaut ist und was damit gemacht werden muss. Jedoch wird die Kenntniss des Grundaufbaus von Typo3 vorrausgesetzt und nicht näher beschreiben.
